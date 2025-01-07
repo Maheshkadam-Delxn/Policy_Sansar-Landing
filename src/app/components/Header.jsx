@@ -4,9 +4,8 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <div className='relative z-10 '>Header</div>
-  )
-}
+ 
+
 <div className="w-full flex items-center justify-between px-8 py-4 text-lg font-medium rounded-b-lg bg-[#FFFFFF] shadow-[0_4px_10px_rgba(0,0,0,0.1)] border border-white rounded-md">
 <div className="text-2xl font-bold text-black tracking-wide">
         POLICY_SANSAR
