@@ -14,7 +14,7 @@ const Our_Partners = () => {
   ];
 
   return (
-    <div className=" w-full h-[50vh] bg-white flex flex-col items-center justify-center gap-5 overflow-hidden">
+    <div className="mt-24 w-full h-[50vh] bg-white flex flex-col items-center justify-center gap-5 overflow-hidden">
       <div className="flex items-center gap-4">
         <hr className="flex-grow border-gray-300 w-64" />
         <h2 className="text-center font-bold text-2xl">Our Partners</h2>
