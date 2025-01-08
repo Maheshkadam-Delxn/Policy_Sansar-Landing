@@ -1,13 +1,15 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-
+import Logo from "../../../public/icons/logo.png"
+import Image from "next/image";
 const Header = () => {
   return (
   <div className="p-3 w-full">
-      <div className="w-full flex items-center justify-between px-8 py-4 text-lg font-medium rounded-2xl bg-[#FFFFFF] shadow-[0_4px_10px_rgba(0,0,0,0.1)] border border-white  relative z-10 ">
-      <div className="text-2xl font-bold text-black tracking-wide">
-        POLICY_SANSAR
+      <div className="w-full flex items-center justify-between px-4 py-1 text-lg font-medium rounded-2xl bg-[#FFFFFF] shadow-[0_4px_10px_rgba(0,0,0,0.1)] border border-white  relative z-10 ">
+      <div className="text-2xl font-bold text-black tracking-wide flex items-center">
+        <Image src={Logo} width={70} height={70} alt="Logo"/>
+        <h1>Policy Sansar</h1>
       </div>
       <div className="flex gap-8 items-center justify-between">
         <Link

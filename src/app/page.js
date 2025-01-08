@@ -5,6 +5,8 @@ import Why_Choose from "./components/Why_Choose";
 import Experts from "./components/Experts";
 import Contact from "./components/Contact";
 import Homee from "./components/Homee";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Home() {
  return(
