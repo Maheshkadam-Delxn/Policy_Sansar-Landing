@@ -7,7 +7,7 @@ import HomeIcon from "../../../public/icons/homelock.png"
 import LockIcon from "../../../public/icons/lock.png"
 const Homee = () => {
   return (
-    <div className='w-full h-[91vh] flex flex-col justify-evenly'>
+    <div className='w-full h-[90vh] flex flex-col justify-between pt-5 '>
 
 
       {/* HERO SECTION HEADLINE */}
