@@ -52,7 +52,7 @@ const Homee = () => {
       height={1080}
       alt='Happy Family'
     />
-    <div className='w-80 h-40 bg-white rounded-xl shadow-2xl absolute -top-28 -right-32 flex flex-col items-start justify-evenly p-3'>
+    <div className='w-80 h-40 bg-white rounded-xl shadow-2xl absolute -top-28 -right-32 flex flex-col items-start justify-evenly pt-3 pl-5'>
       <h1 className='text-2xl font-bold'>My Insurance</h1>
     <div className='flex flex-col items-start gap-3'>
     <div className='flex items-center gap-3'><Image src={HomeIcon} width={24} height={24} alt='HomeIcon'/><h1 className='text-lg'>Home Insurance</h1></div>
