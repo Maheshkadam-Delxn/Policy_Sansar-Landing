@@ -10,10 +10,10 @@ import LifeIcon from "../../../public/icons/lifeIcon.png"
 const Insurances = () => {
   return (
     <div className='mt-12 flex flex-col gap-10'>
-      <div className="flex items-center gap-4">
-        <hr className="flex-grow border-gray-300 w-32" />
+      <div className="flex items-center justify-center gap-4">
+        <hr className=" border-gray-300 w-64" />
         <h2 className="text-center font-bold text-2xl">Explore our Insurance Plans</h2>
-        <hr className="flex-grow border-gray-300 w-64" />
+        <hr className=" border-gray-300 w-64" />
       </div>
       <div className='flex items-center justify-center w-full gap-10 p-5'>
         {/* General Insurance Card */}
