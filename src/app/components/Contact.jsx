@@ -61,12 +61,12 @@ const Contact = () => {
       <div className='bg-white w-1/2 h-[80vh] p-8 flex flex-col items-start justify-center gap-12 rounded-2xl border border-x border-slate-500'>
            <p className='text-2xl font-bold  mb-4'>Get in Touch</p>
            <form className='flex flex-col  gap-4 w-full'>
-             <input type='text' placeholder='Your Name' className='p-3 rounded-lg border border-x border-slate-500  outline-none' required />
-             <input type='email' placeholder='Your Email' className='p-3 rounded-lg border border-x border-slate-500  outline-none' required />
-             <input type='number' placeholder='Your Mobile No' className='p-3 rounded-lg border border-x border-slate-500  outline-none' required />
+             <input type='text' placeholder='Your Name' className='p-3 rounded-2xl border border-x border-slate-500  outline-none' required />
+             <input type='email' placeholder='Your Email' className='p-3 rounded-2xl border border-x border-slate-500  outline-none' required />
+             <input type='number' placeholder='Your Mobile No' className='p-3 rounded-2xl border border-x border-slate-500  outline-none' required />
 
-             <textarea placeholder='Your Message' className='p-3 rounded-lg border border-x border-slate-500  outline-none' rows='5' required></textarea>
-             <button type='submit' className=' bg-[#0040FF] text-white  font-bold p-3 rounded-md hover:bg-gray-200'>Send Message</button>
+             <textarea placeholder='Your Message' className='p-3 rounded-2xl border border-x border-slate-500  outline-none' rows='5' required></textarea>
+             <button type='submit' className=' bg-[#0040FF] text-white  font-bold p-3 rounded-2xl hover:bg-gray-200'>Send Message</button>
            </form>
          </div>
       </div>
