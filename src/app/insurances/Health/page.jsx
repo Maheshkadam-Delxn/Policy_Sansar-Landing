@@ -1,6 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-// import HealthImg from '../../../public/insurance/health.png';
+import h1 from "../../../../public/insurance/h1.png";
+// import HealthImg from "../../../../public/insurance/health-insurance.jpeg";
+import HealthImg from "../../../../public/insurance/health.png";
+
+// import HomeImg from "../../../../public/insurance/home-insurance.jpeg";
+// import travelImg from "../../../../public/insurance/travel-insurance.jpeg";
+
 
 const HealthInsurance = () => {
   return (
@@ -21,7 +27,7 @@ const HealthInsurance = () => {
       
       <div className="w-full md:w-1/3 relative">
         <div className="relative w-full h-64 rounded overflow-hidden group shadow-lg">
-          <Image  alt="Health Insurance" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75" />
+          <Image src={h1} alt="Health Insurance" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75" />
           <div className="absolute inset-0 bg-green-500 bg-opacity-60 flex items-center justify-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
             <p className="text-white font-semibold px-4">Protect your health and finances with our tailored health insurance plans. Get the best medical care without financial stress.</p>
           </div>
@@ -31,7 +37,7 @@ const HealthInsurance = () => {
       
     </div>
     {/* Additional Information Section */}
-    <div className="mt-12 p-6 bg-gray-100 rounded-lg shadow-md">
+    <div className="mt-12 p-6 bg-gray-100 rounded-lg shadow-md h-full">
         <h2 className="text-2xl font-bold text-blue-700 mb-4">Why Choose Health Insurance?</h2>
         <p className="text-gray-700 mb-4">
           Health insurance not only covers hospitalization expenses but also offers preventive healthcare benefits, including routine check-ups and vaccinations. It ensures you receive timely medical attention without worrying about the costs.
@@ -39,8 +45,8 @@ const HealthInsurance = () => {
         <p className="text-gray-700 mb-4">
           Our plans are designed to suit individuals, families, and senior citizens, providing customized coverage as per your needs. Enjoy cashless treatments and extensive medical benefits with Policy Sansar.
         </p>
-        <div className="relative w-full h-64 rounded overflow-hidden group shadow-lg mt-6">
-          <Image  alt="Health Insurance Benefits" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75" />
+        <div className="relative w-full h-48 rounded overflow-hidden group shadow-lg mt-6">
+          <Image src={HealthImg} alt="Health Insurance Benefits" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75" />
           <div className="absolute inset-0 bg-green-500 bg-opacity-60 flex items-center justify-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
             <p className="text-white font-semibold px-4">Stay worry-free with our extensive health insurance benefits. Secure your health today.</p>
           </div>

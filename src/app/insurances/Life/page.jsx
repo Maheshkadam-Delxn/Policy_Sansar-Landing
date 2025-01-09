@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-// import LifeImg from '../../../public/insurance/life.png';
+import LifeImg from "../../../../public/insurance/life.png";
+import l1 from "../../../../public/insurance/l1.png";
 
 const LifeInsurance = () => {
   return (
@@ -21,7 +22,7 @@ const LifeInsurance = () => {
       
       <div className="w-full md:w-1/3 relative">
         <div className="relative w-full h-64 rounded overflow-hidden group shadow-lg">
-          <Image  alt="Life Insurance" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75" />
+          <Image src={l1}  alt="Life Insurance" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75" />
           <div className="absolute inset-0 bg-blue-600 bg-opacity-60 flex items-center justify-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
             <p className="text-white font-semibold px-4">Secure your family’s financial future with our trusted life insurance plans. Get flexible coverage tailored to your needs.</p>
           </div>
@@ -40,7 +41,7 @@ const LifeInsurance = () => {
             Our plans are designed to be flexible, allowing you to customize your coverage according to your specific requirements. Whether you're looking for short-term security or long-term investment benefits, Policy Sansar has the right plan for you.
           </p>
           <div className="relative w-full h-64 rounded overflow-hidden group shadow-lg mt-6">
-            <Image  alt="Life Insurance Benefits" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75" />
+            <Image src={LifeImg} alt="Life Insurance Benefits" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75" />
             <div className="absolute inset-0 bg-blue-600 bg-opacity-60 flex items-center justify-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
               <p className="text-white font-semibold px-4">Plan for the future today. Secure your legacy with our trusted life insurance solutions.</p>
             </div>
