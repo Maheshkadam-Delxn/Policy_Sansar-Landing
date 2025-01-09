@@ -11,7 +11,7 @@ const Homee = () => {
 
 
       {/* HERO SECTION HEADLINE */}
-      <div className="w-full  flex flex-col items-center justify-center text-center gap-3">
+      <div className="w-full  flex flex-col items-center justify-center text-center gap-3 pt-8">
       <h1 className=" font-bold text-6xl">The Insurance Partner</h1>
       <div className='flex items-center gap-2'><h3 className="text-3xl">You can</h3>
       <Image
