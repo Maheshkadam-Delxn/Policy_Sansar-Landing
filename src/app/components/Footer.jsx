@@ -15,13 +15,13 @@ const Footer = () => {
         <div className="flex flex-col items-start gap-3">
           <h1 className='text-3xl font-extrabold'>PolicySansar</h1>
           <div className="flex items-center gap-3">
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] "><FaXTwitter />
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] transition-all ease-in-out duration-300 cursor-pointer"><FaXTwitter />
             </div>
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] "><FaLinkedinIn />
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] transition-all ease-in-out duration-300 cursor-pointer"><FaLinkedinIn />
             </div>
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B]"><FaFacebook />
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] transition-all ease-in-out duration-300 cursor-pointer"><FaFacebook />
             </div>
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B]"><FaInstagram />
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] transition-all ease-in-out duration-300 cursor-pointer"><FaInstagram />
             </div>
           </div>
         </div>

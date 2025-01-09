@@ -14,7 +14,7 @@ export default function Home() {
     <Insurances/>
     <Why_Choose/>
     <Unique/>
-    <Experts/>
+    {/* <Experts/> */}
     {/* <Contact/> */}
     </div>
 );}
