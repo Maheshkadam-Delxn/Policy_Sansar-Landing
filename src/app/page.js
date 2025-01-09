@@ -5,8 +5,7 @@ import Why_Choose from "./components/Why_Choose";
 import Experts from "./components/Experts";
 import Contact from "./components/Contact";
 import Homee from "./components/Homee";
-
-
+import Unique from "./components/Unique";
 export default function Home() {
  return(
  <>
@@ -14,6 +13,7 @@ export default function Home() {
     <Our_Partners/>
     <Insurances/>
     <Why_Choose/>
+    <Unique/>
     <Experts/>
     <Contact/>
     </>
