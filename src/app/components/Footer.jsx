@@ -1,7 +1,12 @@
+"use client"
 import React from 'react'
 import { FaXTwitter,FaLinkedinIn,FaFacebook,FaInstagram } from "react-icons/fa6";
 import { IoCallSharp ,IoMailOpenSharp,IoLocationSharp} from "react-icons/io5";
+import { Link,animateScroll as scroll } from 'react-scroll';
 const Footer = () => {
+  const scrollToTop=()=>{
+    scroll.scrollToTop()
+  }
   return (
     <div className='w-full h-[75vh] bg-[#121212] text-white p-8  '>
       {/* logo social with navigations */}
@@ -22,11 +27,10 @@ const Footer = () => {
         </div>
         <div className='flex flex-col items-end gap-10 w-full'>
         <div className="flex flex-col items-end gap-3 text-xl font-md">
-          <h1  className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300'>Home</h1>
-          <h1 className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300'>Services</h1>
-          <h1 className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300'>About-us</h1>
-          <h1 className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300'>Plans</h1>
-          <h1 className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300'>Blog</h1>
+          <Link onClick={scrollToTop} className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300'>Home</Link>
+          <Link to='explore' smooth={true} duration={1000} className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300'>Explore</Link>
+          <Link to='about' smooth={true} duration={1000} className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300'>About-us</Link>
+          <Link to='contact' smooth={true} duration={1000} className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300'>Contact-us</Link>
         </div>
         <div className='w-1/3 flex flex-col items-start gap-4 p-5 bg-[#474747] rounded-2xl'>
           <h1>Contact</h1>

@@ -1,8 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import AnimatedHeader from './AnimatedHeader';
 const Our_Partners = () => {
+  
   const partners = [
-    { id: 1, img: '/providers/bajaj.png', name: 'Partner 1' },
+    // { id: 1, img: '/providers/bajaj.png', name: 'Partner 1' },
     { id: 2, img: '/providers/hdfc.png', name: 'Partner 2' },
     { id: 3, img: '/providers/icic.png', name: 'Partner 3' },
     { id: 4, img: '/providers/kotak-genera..png', name: 'Partner 4' },
@@ -15,11 +17,7 @@ const Our_Partners = () => {
 
   return (
     <div className="mt-24 w-full h-[50vh] bg-white flex flex-col items-center justify-center gap-5 overflow-hidden">
-      <div className="flex items-center gap-4">
-        <hr className="flex-grow border-gray-300 w-64" />
-        <h2 className="text-center font-bold text-2xl">Our Partners</h2>
-        <hr className="flex-grow border-gray-300 w-64" />
-      </div>
+     <AnimatedHeader text="Our Partners"/>
       <div className="relative overflow-hidden">
         <div className="flex animate-scroll gap-8">
           {partners.map((partner) => (

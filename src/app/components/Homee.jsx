@@ -1,67 +1,130 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
-import handshakeIcon from '../../../public/icons/handshake.png'; // Import image directly
-import family2 from "../../../public/icons/family2.png"
-import family from "../../../public/icons/family.png"
-import HomeIcon from "../../../public/icons/homelock.png"
-import LockIcon from "../../../public/icons/lock.png"
+import { motion } from 'framer-motion'; // Import motion from framer-motion
+import handshakeIcon from '../../../public/icons/handshake.png'; 
+import family2 from "../../../public/icons/family2.png";
+import family from "../../../public/icons/family.png";
+import HomeIcon from "../../../public/icons/homelock.png";
+import LockIcon from "../../../public/icons/lock.png";
+
 const Homee = () => {
   return (
-    <div className='w-full h-[90vh] flex flex-col justify-between pt-5 '>
-
+    <div name="home" className='w-full h-[90vh] flex flex-col justify-between pt-5'>
 
       {/* HERO SECTION HEADLINE */}
-      <div className="w-full  flex flex-col items-center justify-center text-center gap-3 pt-8">
-      <h1 className=" font-bold text-6xl">The Insurance Partner</h1>
-      <div className='flex items-center gap-2'><h3 className="text-3xl">You can</h3>
-      <Image
-        src={handshakeIcon} // Use imported image
-        alt="Handshake icon" // Add alt text for accessibility
-        width={60}
-        height={60}
-      />
-      <h3 className="text-3xl">Rely On</h3>
-     
+      <div className="w-full flex flex-col items-center justify-center text-center gap-3 pt-8">
+        <motion.h1 
+          className="font-bold text-6xl text-blue-700"
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          The Insurance Partner
+        </motion.h1>
+        <div className='flex items-center gap-2'>
+          <motion.h3 
+            className="text-3xl"
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            You can
+          </motion.h3>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            <Image
+              src={handshakeIcon} // Use imported image
+              alt="Handshake icon"
+              width={60}
+              height={60}
+            />
+          </motion.div>
+          <motion.h3 
+            className="text-3xl"
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Rely On
+          </motion.h3>
+        </div>
+        <motion.h6
+          className='text-lg text-[#646262] font-semibold'
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          Your One-Stop Insurance Shop for Life's Essentials
+        </motion.h6>
       </div>
-      <h6 className='text-lg text-[#646262] font-semibold'>Your One-Stop Insurance Shop for Life's Essentials</h6>
-    </div>
 
+      {/* FEATURE SECTION CARD */}
+      <div className='w-full flex items-center justify-evenly'>
+        <motion.div 
+          className='bg-white w-80 h-96 shadow-2xl rounded-xl p-5 flex flex-col gap-3 relative'
+          initial={{ opacity: 0, y: 50 }} // Initial state, invisible and slightly lower
+          animate={{ opacity: 1, y: 0 }} // Final state, visible and in normal position
+          transition={{ duration: 1, delay: 1 }} // Delay of 2 seconds and 1 second duration
+        >
+          <motion.h1 
+            className='text-2xl font-extrabold'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Discover the best options to safeguard your future.
+          </motion.h1>
+          <motion.h6 
+            className='text-xs font-bold text-[#646262]'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            Empowering Your Future with the Right Coverage.
+          </motion.h6>
+          <div className="w-full h-2/3">
+            <Image
+              src={family2}
+              width={1920}
+              height={1000}
+              alt='family'
+              className='absolute -bottom-2 w-full h-full object-cover'
+            />
+          </div>
+        </motion.div>
 
-   <div className='w-full flex items-center justify-evenly'>
-     {/* FEATURE SECTION CARD */}
-     <div className='bg-white w-80 h-96 shadow-2xl rounded-xl p-5 flex flex-col gap-3 relative'>
-      <h1 className='text-2xl font-extrabold'>Discover the best options to safeguard your future.</h1>
-      <h6 className='text-xs font-bold text-[#646262]'>Empowering Your Future with the Right Coverage.</h6>
-     <div className=" w-full h-2/3">
-      <Image
-        src={family2}
-        width={1920}
-        height={1000}
-        alt='family'
-        className='absolute -bottom-2 w-full h-full object-cover '
-      /></div>
-     
-     </div>
-
-
-{/* ADVERTISMENT COUPLE  */}
-<div className='relative'>
-    <Image
-      src={family}
-      width={720}
-      height={1080}
-      alt='Happy Family'
-    />
-    <div className='w-80 h-40 bg-white rounded-xl shadow-2xl absolute -top-28 -right-32 flex flex-col items-start justify-evenly pt-3 pl-5'>
-      <h1 className='text-2xl font-bold'>My Insurance</h1>
-    <div className='flex flex-col items-start gap-3'>
-    <div className='flex items-center gap-3'><Image src={HomeIcon} width={24} height={24} alt='HomeIcon'/><h1 className='text-lg'>Home Insurance</h1></div>
-      <div className='flex items-center gap-3'><Image src={LockIcon} width={24} height={24} alt='HomeIcon'/><h1 className='text-lg'>Term Life Insurance</h1></div>
-
-    </div>
-    </div>
-</div>
-   </div>
+        {/* ADVERTISEMENT COUPLE - INSURANCE CARD POP UP ANIMATION */}
+        <motion.div 
+          className='relative'
+          initial={{ opacity: 0, y: 50 }} // Initial state, invisible and slightly lower
+          animate={{ opacity: 1, y: 0 }} // Final state, visible and in normal position
+          transition={{ duration: 1, delay: 1 }} // Delay of 2 seconds and 1 second duration
+        >
+          <Image
+            src={family}
+            width={720}
+            height={1080}
+            alt='Happy Family'
+          />
+          <div className='w-80 h-40 bg-white rounded-xl shadow-2xl absolute -top-28 -right-32 flex flex-col items-start justify-evenly pt-3 pl-5'>
+            <h1 className='text-2xl font-bold'>My Insurance</h1>
+            <div className='flex flex-col items-start gap-3'>
+              <div className='flex items-center gap-3'>
+                <Image src={HomeIcon} width={24} height={24} alt='HomeIcon' />
+                <h1 className='text-lg'>Home Insurance</h1>
+              </div>
+              <div className='flex items-center gap-3'>
+                <Image src={LockIcon} width={24} height={24} alt='LockIcon' />
+                <h1 className='text-lg'>Term Life Insurance</h1>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 };

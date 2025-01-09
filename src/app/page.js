@@ -8,7 +8,7 @@ import Homee from "./components/Homee";
 import Unique from "./components/Unique";
 export default function Home() {
  return(
- <>
+ <div className="overflow-hidden">
     <Homee/>
     <Our_Partners/>
     <Insurances/>
@@ -16,5 +16,5 @@ export default function Home() {
     <Unique/>
     <Experts/>
     <Contact/>
-    </>
+    </div>
 );}
