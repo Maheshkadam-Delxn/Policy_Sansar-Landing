@@ -24,7 +24,7 @@ const HealthInsurance = () => {
       </div>
       
       <div className="w-full md:w-1/3 relative">
-        <div className="relative w-full h-64 rounded overflow-hidden group shadow-lg rounded-3xl">
+        <div className="relative w-full h-64  overflow-hidden group shadow-lg rounded-3xl">
           <Image src={h1} alt="Health Insurance" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75 rounded-3xl" />
           <div className="absolute inset-0 bg-green-500 bg-opacity-60 flex items-center justify-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
             <p className="text-white font-semibold px-4">Protect your health and finances with our tailored health insurance plans. Get the best medical care without financial stress.</p>
