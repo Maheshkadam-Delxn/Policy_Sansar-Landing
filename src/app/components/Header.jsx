@@ -4,8 +4,8 @@ import { Link ,animateScroll as scroll} from "react-scroll";
 import Logo from "../../../public/insurance/logo.png";
 import Link1 from "next/link";
 import Image from "next/image";
-
 const Header = () => {
+
   const [logoSize, setLogoSize] = useState(100); // Initial logo size in px
   const scrollToTop = () => {
     scroll.scrollToTop();
@@ -35,18 +35,18 @@ const Header = () => {
           <h1 className="text-3xl text-[#1D951B]">Policy Sansar</h1>
         </Link1>
         <div className="flex gap-8 items-center justify-between">
-          <Link  onClick={scrollToTop} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
+          <Link1 href={"/"}   className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
             Home
-          </Link>
+          </Link1>
           <Link to="explore" smooth={true} duration={1000} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
             Explore
           </Link>
-          <Link to="about" smooth={true} duration={1000} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
+          <Link1 href="/about-us" className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
             About-us
-          </Link>
-          <Link to="contact" smooth={true} duration={1000} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
+          </Link1>
+          <Link1 href="/contact" className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
             Contact-us
-          </Link>
+          </Link1>
         </div>
       </div>
     </div>

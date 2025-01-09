@@ -3,7 +3,7 @@ import React from 'react'
 import Person1 from "../../../public/icons/person1.png"
 import Person2 from "../../../public/icons/person2.png"
 import Person3 from "../../../public/icons/person3.png"
-import AnimatedHeader from './AnimatedHeader'
+import AnimatedHeader from '../components/AnimatedHeader'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
