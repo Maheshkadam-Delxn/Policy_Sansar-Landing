@@ -1,55 +1,107 @@
+"use client";
 import React from "react";
 import Image from "next/image";
-import Family3 from "../../../public/icons/family3.png";
-import Bottom1LeftIcon from "../../../public/icons/re.png"
-import MidRightIcon from "../../../public/icons/midRightIcon.png"
-import MidLeftIcon from "../../../public/icons/MidLeftIcon.png"
-import BottomRightIcon from "../../../public/icons/BottomRightIcon.png"
-import TopIcon from "../../../public/icons/TopIcon.png"
+import { motion } from "framer-motion";
+import Bottom1LeftIcon from "../../../public/icons/re.png";
+import MidRightIcon from "../../../public/icons/midRightIcon.png";
+import MidLeftIcon from "../../../public/icons/MidLeftIcon.png";
+import BottomRightIcon from "../../../public/icons/BottomRightIcon.png";
+import TopIcon from "../../../public/icons/TopIcon.png";
 import AnimatedHeader from "./AnimatedHeader";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
 const Why_Choose = () => {
   return (
-    <div className="mt-12 w-full h-[100vh] relative ">
-     <AnimatedHeader text="Why Choose Us"/>
-      <div className=" flex flex-col justify-between w-full h-[95.5vh]">
-        <div className="w-full flex items-center justify-center">
-          <div className="w-80 h-40 bg-white shadow-2xl translate-y-16 rounded-2xl p-3 flex flex-col justify-between ">
-          <h1 className="text-xl font-bold">Customized Recommendations Tailored to Your Needs</h1>
-          <div className="w-full flex items-end justify-end"><Image src={TopIcon} width={50} height={50} alt="Icon4"/></div>
-          </div>
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="w-80 h-32 bg-white shadow-2xl translate-x-16 rounded-2xl p-3 flex flex-col justify-between">
-          <h1 className="text-xl font-bold">Affordable Premiums</h1>
-          <div className="w-full flex items-end justify-end"><Image src={MidLeftIcon} width={50} height={50} alt="Icon4"/></div>
-          </div>
-          <div className="w-80 h-32 bg-white shadow-2xl -translate-x-16 rounded-2xl p-3 flex flex-col justify-between">
-          <h1 className="text-xl font-bold">Easy and Secure claim process</h1>
-          <div className="w-full flex items-end justify-end"><Image src={MidRightIcon} width={50} height={50} alt="Icon4"/></div>
-          </div>
-        </div>
-        <div className="w-full flex items-center justify-between ">
-          <div className="w-80 h-32 bg-white shadow-2xl  translate-x-8 rounded-2xl p-3 flex flex-col justify-between">
-            <h1 className="text-xl font-bold">Compare multiple Policies instantly</h1>
-            <div className="w-full flex items-end justify-end"><Image src={Bottom1LeftIcon} width={50} height={50} alt="Icon4"/></div>
-          </div>
-          <div className="w-80 h-32 bg-white shadow-2xl -translate-x-8 rounded-2xl p-3 flex flex-col justify-between">
-          <h1 className="text-xl font-bold">Expert Customer Support</h1>
-          <div className="w-full flex items-end justify-end"><Image src={BottomRightIcon} width={50} height={50} alt="Icon4"/></div>
-          </div>
+    <div className="w-full min-h-screen mt-[90px] flex flex-col gap-10 ">
+      <AnimatedHeader text="Why Choose Us" />
+      <div className="relative w-full h-full flex flex-col items-center justify-center px-8 gap-10">
+        {/* Background Image and Overlay */}
+        <div className="absolute inset-0 bg-[url('/icons/family3.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+
+        {/* Content Section */}
+        <div className="relative  w-full flex flex-col items-center">
+          <motion.div
+            className="w-full flex flex-wrap justify-center gap-6 mt-8 p-14"
+            initial="hidden"
+            animate="visible"
+            variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+          >
+            {/* Top Center Card */}
+            <motion.div
+              className="w-96 bg-white shadow-lg rounded-2xl p-5 text-center border border-gray-200 relative"
+              variants={cardVariants}
+            >
+              <h1 className="text-xl font-bold text-gray-800">
+                Customized Recommendations Tailored to Your Needs
+              </h1>
+              <div className="flex justify-end mt-2">
+                <Image src={TopIcon} width={40} height={40} alt="Icon" />
+              </div>
+            </motion.div>
+
+            {/* Two cards on left and right */}
+            <div className="w-full flex justify-center gap-12 mt-6">
+              <motion.div
+                className="w-80 bg-white shadow-lg rounded-2xl p-5 border border-gray-200 relative "
+                variants={cardVariants}
+              >
+                <h1 className="text-xl font-bold text-gray-800">
+                  Affordable Premiums
+                </h1>
+                <div className="flex justify-end mt-2">
+                  <Image src={MidLeftIcon} width={40} height={40} alt="Icon" />
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="w-80 bg-white shadow-lg rounded-2xl p-5 border border-gray-200 relative "
+                variants={cardVariants}
+              >
+                <h1 className="text-xl font-bold text-gray-800">
+                  Easy and Secure Claim Process
+                </h1>
+                <div className="flex justify-end mt-2">
+                  <Image src={MidRightIcon} width={40} height={40} alt="Icon" />
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Two Bottom Cards */}
+            <div className="w-full flex justify-center gap-12 mt-6">
+              <motion.div
+                className="w-80 bg-white shadow-lg rounded-2xl p-5 border border-gray-200 relative "
+                variants={cardVariants}
+              >
+                <h1 className="text-xl font-bold text-gray-800">
+                  Compare Multiple Policies Instantly
+                </h1>
+                <div className="flex justify-end mt-2">
+                  <Image src={Bottom1LeftIcon} width={40} height={40} alt="Icon" />
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="w-80 bg-white shadow-lg rounded-2xl p-5 border border-gray-200 relative "
+                variants={cardVariants}
+              >
+                <h1 className="text-xl font-bold text-gray-800">
+                  Expert Customer Support
+                </h1>
+                <div className="flex justify-end mt-2">
+                  <Image src={BottomRightIcon} width={40} height={40} alt="Icon" />
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </div>
-      <Image
-  src={Family3}
-  alt="FamilyIcon"
-  width={1920}
-  height={1080}
-  className="w-fit h-2/4 object-contain bottom-0 absolute left-1/2 translate-x-[-50%] border-none shadow-[10px_10px_50px_rgba(0,0,0,0.3)] rounded-3xl"
-/>
-
-
     </div>
   );
 };
+
 
 export default Why_Choose;
