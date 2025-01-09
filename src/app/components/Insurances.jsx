@@ -19,7 +19,7 @@ const Insurances = () => {
 
   return (
     <div name="explore" className='mt-12 flex flex-col gap-24 h-[100vh] items-center justify-center'>
-      <AnimatedHeader text="Explore Our Insurance Plans" />
+      <AnimatedHeader  text="Explore Our Insurance Plans" />
       <div className='flex items-center justify-center w-full gap-10 p-5'>
         
         {/* General Insurance Card */}
