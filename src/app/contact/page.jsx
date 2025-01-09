@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import mailicon from "../../../public/icons/mail.png";
 import callicon from "../../../public/icons/call.png"
-import AnimatedHeader from './AnimatedHeader';
+import AnimatedHeader from '../components/AnimatedHeader';
 const Contact = () => {
   return (
     <div name="contact" className='mt-12 h-[120vh]  flex  flex-col items-center justify-center gap-12 p-10 bg-white'>
@@ -63,7 +63,7 @@ const Contact = () => {
              <input type='number' placeholder='Your Mobile No' className='p-3 rounded-2xl border border-x border-slate-500  outline-none' required />
 
              <textarea placeholder='Your Message' className='p-3 rounded-2xl border border-x border-slate-500  outline-none' rows='5' required></textarea>
-             <button type='submit' className=' bg-blue-500   font-bold p-3 rounded-2xl border-x-2 border-y-2 border-blue-500 hover:border-x-2 hover:border-y-2 hover:border-blue-500 hover:text-black transition-all ease-in-out duration-700  cursor-pointer'>Send Message</button>
+             <button type='submit' className=' bg-blue-500 text-white  font-bold p-3 rounded-2xl border-x-2 border-y-2 border-blue-500 hover:bg-white hover:border-x-2 hover:border-y-2 hover:border-blue-500 hover:text-blue-500 transition-all ease-in-out duration-700 hover:text-white cursor-pointer'>Send Message</button>
            </form>
          </div>
       </div>

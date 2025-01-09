@@ -15,22 +15,22 @@ const Footer = () => {
         <div className="flex flex-col items-start gap-3">
           <h1 className='text-3xl font-extrabold'>PolicySansar</h1>
           <div className="flex items-center gap-3">
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white "><FaXTwitter />
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] "><FaXTwitter />
             </div>
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white "><FaLinkedinIn />
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] "><FaLinkedinIn />
             </div>
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white "><FaFacebook />
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B]"><FaFacebook />
             </div>
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white "><FaInstagram />
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B]"><FaInstagram />
             </div>
           </div>
         </div>
         <div className='flex flex-col items-end gap-10 w-full'>
         <div className="flex flex-col items-end gap-3 text-xl font-md">
-          <Link onClick={scrollToTop} className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300'>Home</Link>
-          <Link to='explore' smooth={true} duration={1000} className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300'>Explore</Link>
-          <Link to='about' smooth={true} duration={1000} className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300'>About-us</Link>
-          <Link to='contact' smooth={true} duration={1000} className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300'>Contact-us</Link>
+          <Link onClick={scrollToTop} className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B]'>Home</Link>
+          <Link to='explore' smooth={true} duration={1000} className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B]'>Explore</Link>
+          <Link to='about' smooth={true} duration={1000} className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B]'>About-us</Link>
+          <Link to='contact' smooth={true} duration={1000} className='cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B]'>Contact-us</Link>
         </div>
         <div className='w-1/3 flex flex-col items-start gap-4 p-5 bg-[#474747] rounded-2xl'>
           <h1>Contact</h1>
