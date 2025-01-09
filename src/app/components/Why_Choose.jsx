@@ -6,15 +6,11 @@ import MidRightIcon from "../../../public/icons/midRightIcon.png"
 import MidLeftIcon from "../../../public/icons/MidLeftIcon.png"
 import BottomRightIcon from "../../../public/icons/BottomRightIcon.png"
 import TopIcon from "../../../public/icons/TopIcon.png"
-
+import AnimatedHeader from "./AnimatedHeader";
 const Why_Choose = () => {
   return (
     <div className="mt-12 w-full h-[100vh] relative ">
-      <div className="flex items-center justify-center gap-4">
-        <hr className=" border-gray-300 w-64" />
-        <h2 className="text-center font-bold text-2xl">Why Choose Us?</h2>
-        <hr className=" border-gray-300 w-64" />
-      </div>
+     <AnimatedHeader text="Why Choose Us"/>
       <div className=" flex flex-col justify-between w-full h-[95.5vh]">
         <div className="w-full flex items-center justify-center">
           <div className="w-80 h-40 bg-white shadow-2xl translate-y-16 rounded-2xl p-3 flex flex-col justify-between ">

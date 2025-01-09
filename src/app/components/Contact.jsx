@@ -2,15 +2,11 @@ import React from 'react'
 import Image from 'next/image';
 import mailicon from "../../../public/icons/mail.png";
 import callicon from "../../../public/icons/call.png"
-
+import AnimatedHeader from './AnimatedHeader';
 const Contact = () => {
   return (
     <div name="contact" className='mt-12 h-[120vh]  flex  flex-col items-center justify-center gap-12 p-10 bg-white'>
-      <div className="flex items-center justify-center gap-4">
-        <hr className=" border-gray-300 w-64" />
-        <h2 className="text-center font-bold text-2xl">Contact Us</h2>
-        <hr className=" border-gray-300 w-64" />
-      </div>
+     <AnimatedHeader text="Contact Us"/>
       {/* parent div */}
       <div className="flex w-full  justify-between gap-3">
 
