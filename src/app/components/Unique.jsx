@@ -36,7 +36,7 @@ const Unique = () => {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center"
+              className="w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
             >
               <div className="flex items-start gap-6 p-3">
                 <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">1</div>
@@ -54,7 +54,7 @@ const Unique = () => {
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 100 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
-                className="w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center"
+                className="w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
               >
                 <div className="flex items-start gap-6 p-3">
                   <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">2</div>
@@ -72,7 +72,7 @@ const Unique = () => {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center"
+              className="w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
             >
               <div className="flex items-start gap-6 p-3">
                 <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">3</div>

@@ -13,29 +13,20 @@ const Homee = () => {
     <div name="home" className='w-full h-[90vh] flex flex-col justify-between pt-5'>
 
       {/* HERO SECTION HEADLINE */}
-      <div className="w-full flex flex-col items-center justify-center text-center gap-3 pt-8">
-        <motion.h1 
-          className="font-bold text-6xl text-blue-700"
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
+      <motion.div 
+        className="w-full flex flex-col items-center justify-center text-center gap-3 pt-8"
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.h1 className="font-bold text-6xl text-blue-700">
           The Insurance Partner
         </motion.h1>
         <div className='flex items-center gap-2'>
-          <motion.h3 
-            className="text-3xl"
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
+          <motion.h3 className="text-3xl">
             You can
           </motion.h3>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-          >
+          <motion.div>
             <Image
               src={handshakeIcon} // Use imported image
               alt="Handshake icon"
@@ -43,24 +34,14 @@ const Homee = () => {
               height={60}
             />
           </motion.div>
-          <motion.h3 
-            className="text-3xl"
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
+          <motion.h3 className="text-3xl">
             Rely On
           </motion.h3>
         </div>
-        <motion.h6
-          className='text-lg text-[#646262] font-semibold'
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
+        <motion.h6 className='text-lg text-[#646262] font-semibold'>
           Your One-Stop Insurance Shop for Life's Essentials
         </motion.h6>
-      </div>
+      </motion.div>
 
       {/* FEATURE SECTION CARD */}
       <div className='w-full flex items-center justify-evenly'>

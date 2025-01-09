@@ -13,55 +13,61 @@ const Features = () => {
   const [ref4, inView4] = useInView({ triggerOnce: true });
 
   return (
-    <div className="w-full h-[30vh] bg-blue-600 p-10 flex items-center justify-between gap-5">
-      {/* Card 1 */}
-      <div ref={ref1} className="w-1/4 h-full bg-white flex items-center justify-center rounded-lg">
+    <div className="w-full h-[50vh] bg-[#000f23] p-10 flex flex-col items-center justify-between gap-5">
+        <h1 className="text-white text-2xl font-bold">Our Achievments</h1>
+   <div className="w-full h-full flex items-center justify-between gap-5">
+       {/* Card 1 */}
+       <div ref={ref1} className="w-1/4 h-2/3  flex items-center justify-center rounded-lg">
         <div className="flex flex-col items-center gap-3">
           <div className="flex items-end gap-3">
-            <HiOutlineClipboardDocumentCheck className="text-5xl text-[#0040FF] font-bold" />
-            <h1 className="text-5xl font-extrabold">
+            <HiOutlineClipboardDocumentCheck className="text-5xl text-white font-bold" />
+            <h1 className="text-5xl font-extrabold text-white">
               {inView1 && <CountUp start={0} end={100} duration={2.5} suffix="+" />}
             </h1>
           </div>
-          <h1 className="font-bold text-slate-500">Diverse Insurance plans</h1>
+          <h1 className="font-bold text-white">Diverse Insurance plans</h1>
         </div>
       </div>
+      <hr className="w-32 rotate-90"/>
       {/* Card 2 */}
-      <div ref={ref2} className="w-1/4 h-full bg-white flex items-center justify-center rounded-lg">
+      <div ref={ref2} className="w-1/4 h-2/3  flex items-center justify-center rounded-lg">
         <div className="flex flex-col items-center gap-3">
           <div className="flex items-center gap-3">
-            <MdPeopleOutline className="text-5xl text-[#0040FF] font-bold" />
-            <h1 className="text-5xl font-extrabold">
+            <MdPeopleOutline className="text-5xl text-white font-bold" />
+            <h1 className="text-5xl font-extrabold text-white">
               {inView2 && <CountUp start={0} end={100000} duration={2.5} separator="," suffix="+" />}
             </h1>
           </div>
-          <h1 className="font-bold text-slate-500">Happy Customers</h1>
+          <h1 className="font-bold text-white">Happy Customers</h1>
         </div>
       </div>
+      <hr className="w-32 rotate-90"/>
       {/* Card 3 */}
-      <div ref={ref3} className="w-1/4 h-full bg-white flex items-center justify-center rounded-lg">
+      <div ref={ref3} className="w-1/4 h-2/3  flex items-center justify-center rounded-lg">
         <div className="flex flex-col items-center gap-3">
           <div className="flex items-center gap-3">
-            <SlGraph className="text-5xl text-[#0040FF] font-bold" />
-            <h1 className="text-5xl font-extrabold">
+            <SlGraph className="text-5xl text-white font-bold" />
+            <h1 className="text-5xl font-extrabold text-white">
               {inView3 && <CountUp start={0} end={100} duration={2.5} suffix="%" />}
             </h1>
           </div>
-          <h1 className="font-bold text-slate-500">Achievement Percentage</h1>
+          <h1 className="font-bold text-white">Achievement Percentage</h1>
         </div>
       </div>
+      <hr className="w-32 rotate-90 "/>
       {/* Empty Card (optional for layout) */}
-      <div ref={ref4} className="w-1/4 h-full bg-white flex items-center justify-center rounded-lg">
+      <div ref={ref4} className="w-1/4 h-2/3  flex items-center justify-center rounded-lg">
   <div className="flex flex-col items-center gap-3">
     <div className="flex items-center gap-3">
-      <TiStarOutline className="text-5xl text-[#0040FF] font-bold" />
-      <h1 className="text-5xl font-extrabold">
+      <TiStarOutline className="text-5xl text-white font-bold" />
+      <h1 className="text-5xl font-extrabold text-white">
         {inView4 && <CountUp start={0} end={4.9} duration={2.5} decimals={1} />} {/* Added decimals={1} */}
       </h1>
     </div>
-    <h1 className="font-bold text-slate-500">Customer Ratings</h1>
+    <h1 className="font-bold text-white">Customer Ratings</h1>
   </div>
 </div>
+   </div>
 
     </div>
   );

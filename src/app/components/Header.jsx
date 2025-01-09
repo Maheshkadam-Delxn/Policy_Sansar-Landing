@@ -35,16 +35,16 @@ const Header = () => {
           <h1 className="text-3xl text-[#1D951B]">Policy Sansar</h1>
         </Link1>
         <div className="flex gap-8 items-center justify-between">
-          <Link  onClick={scrollToTop} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-black after:w-0 after:transition-all after:duration-300 hover:after:w-full">
+          <Link  onClick={scrollToTop} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
             Home
           </Link>
-          <Link to="explore" smooth={true} duration={1000} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-black after:w-0 after:transition-all after:duration-300 hover:after:w-full">
+          <Link to="explore" smooth={true} duration={1000} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
             Explore
           </Link>
-          <Link to="about" smooth={true} duration={1000} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-black after:w-0 after:transition-all after:duration-300 hover:after:w-full">
+          <Link to="about" smooth={true} duration={1000} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
             About-us
           </Link>
-          <Link to="contact" smooth={true} duration={1000} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-black after:w-0 after:transition-all after:duration-300 hover:after:w-full">
+          <Link to="contact" smooth={true} duration={1000} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
             Contact-us
           </Link>
         </div>

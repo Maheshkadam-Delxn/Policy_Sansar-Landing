@@ -62,7 +62,7 @@ const Contact = () => {
              <input type='number' placeholder='Your Mobile No' className='p-3 rounded-2xl border border-x border-slate-500  outline-none' required />
 
              <textarea placeholder='Your Message' className='p-3 rounded-2xl border border-x border-slate-500  outline-none' rows='5' required></textarea>
-             <button type='submit' className=' bg-[#0040FF] text-white  font-bold p-3 rounded-2xl hover:bg-gray-200'>Send Message</button>
+             <button type='submit' className=' bg-blue-500 text-white  font-bold p-3 rounded-2xl border-x-2 border-y-2 border-blue-500 hover:bg-white hover:border-x-2 hover:border-y-2 hover:border-blue-500 hover:text-blue-500 transition-all ease-in-out duration-700 hover:text-white cursor-pointer'>Send Message</button>
            </form>
          </div>
       </div>

@@ -32,10 +32,10 @@ const Why_Choose = () => {
           >
             {/* Top Center Card */}
             <motion.div
-              className="w-96 bg-white shadow-lg rounded-2xl p-5 text-center border border-gray-200 relative"
+              className="w-96 bg-white shadow-lg rounded-2xl p-5 text-center  relative text-gray-800  hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
               variants={cardVariants}
             >
-              <h1 className="text-xl font-bold text-gray-800">
+              <h1 className="text-xl font-bold ">
                 Customized Recommendations Tailored to Your Needs
               </h1>
               <div className="flex justify-end mt-2">
@@ -46,10 +46,10 @@ const Why_Choose = () => {
             {/* Two cards on left and right */}
             <div className="w-full flex justify-center gap-12 mt-6">
               <motion.div
-                className="w-80 bg-white shadow-lg rounded-2xl p-5 border border-gray-200 relative "
+                className="w-80 bg-white shadow-lg rounded-2xl p-5  relative text-gray-800  hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
                 variants={cardVariants}
               >
-                <h1 className="text-xl font-bold text-gray-800">
+                <h1 className="text-xl font-bold ">
                   Affordable Premiums
                 </h1>
                 <div className="flex justify-end mt-2">
@@ -58,10 +58,10 @@ const Why_Choose = () => {
               </motion.div>
 
               <motion.div
-                className="w-80 bg-white shadow-lg rounded-2xl p-5 border border-gray-200 relative "
+                className="w-80 bg-white shadow-lg rounded-2xl p-5  relative text-gray-800  hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
                 variants={cardVariants}
               >
-                <h1 className="text-xl font-bold text-gray-800">
+                <h1 className="text-xl font-bold ">
                   Easy and Secure Claim Process
                 </h1>
                 <div className="flex justify-end mt-2">
@@ -73,10 +73,10 @@ const Why_Choose = () => {
             {/* Two Bottom Cards */}
             <div className="w-full flex justify-center gap-12 mt-6">
               <motion.div
-                className="w-80 bg-white shadow-lg rounded-2xl p-5 border border-gray-200 relative "
+                className="w-80 bg-white shadow-lg rounded-2xl p-5  relative text-gray-800  hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
                 variants={cardVariants}
               >
-                <h1 className="text-xl font-bold text-gray-800">
+                <h1 className="text-xl font-bold ">
                   Compare Multiple Policies Instantly
                 </h1>
                 <div className="flex justify-end mt-2">
@@ -85,10 +85,10 @@ const Why_Choose = () => {
               </motion.div>
 
               <motion.div
-                className="w-80 bg-white shadow-lg rounded-2xl p-5 border border-gray-200 relative "
+                className="w-80 bg-white shadow-lg rounded-2xl p-5  relative text-gray-800  hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
                 variants={cardVariants}
               >
-                <h1 className="text-xl font-bold text-gray-800">
+                <h1 className="text-xl font-bold ">
                   Expert Customer Support
                 </h1>
                 <div className="flex justify-end mt-2">
