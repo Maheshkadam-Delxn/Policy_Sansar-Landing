@@ -6,7 +6,8 @@ import LifeImg from "../../../public/insurance/life.png"
 import GeneralIcon from "../../../public/icons/generalIcon.png"
 import HealthIcon from "../../../public/icons/healthIcon.png"
 import LifeIcon from "../../../public/icons/lifeIcon.png"
-
+import Link from 'next/link'
+import General from '../insurances/General/page.jsx'
 const Insurances = () => {
   return (
     <div className='mt-12 flex flex-col gap-24 h-[100vh] items-center justify-center'>
@@ -17,7 +18,7 @@ const Insurances = () => {
       </div>
       <div className='flex items-center justify-center w-full gap-10 p-5'>
         {/* General Insurance Card */}
-        <div className='relative w-1/4 bg-white rounded-lg h-96 shadow-lg border border-x border-y border-slate-200 overflow-hidden group'>
+        <Link href={'../insurances/General'} className='relative w-1/4 bg-white rounded-lg h-96 shadow-lg border border-x border-y border-slate-200 overflow-hidden group' >
           <Image
               src={GeneralImg}
               alt='General Insurance'
@@ -42,10 +43,10 @@ const Insurances = () => {
               Protect your assets with comprehensive general insurance plans covering various needs and circumstances.
             </p>
           </div>
-        </div>
+        </Link>
 
         {/* Health Insurance Card */}
-        <div className='relative w-1/4 bg-white rounded-lg h-96 shadow-lg border border-x border-y border-slate-200 overflow-hidden group flex flex-col justify-between'>
+        <Link href={"../insurances/Health"} className='relative w-1/4 bg-white rounded-lg h-96 shadow-lg border border-x border-y border-slate-200 overflow-hidden group flex flex-col justify-between'>
           <Image
               src={HealthImg}
               alt='Health Insurance'
@@ -70,10 +71,10 @@ const Insurances = () => {
               Get access to the best healthcare services with our health insurance plans tailored for your needs.
             </p>
           </div>
-        </div>
+        </Link>
 
         {/* Life Insurance Card */}
-        <div className='relative w-1/4 bg-white rounded-lg h-96 shadow-lg border border-x border-y border-slate-200 overflow-hidden group'>
+        <Link href={"../insurances/Life"} className='relative w-1/4 bg-white rounded-lg h-96 shadow-lg border border-x border-y border-slate-200 overflow-hidden group'>
           <Image
               src={LifeImg}
               alt='Life Insurance'
@@ -98,7 +99,7 @@ const Insurances = () => {
               Secure your future and the well-being of your loved ones with our life insurance plans.
             </p>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   )
