@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import Promote from "../../../public/insurance/promote.png";
@@ -6,22 +6,42 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Unique = () => {
-  // Set up the useInView hook
-  const [inViewRef, inView] = useInView({
-    triggerOnce: true, // Trigger the animation only once
-    threshold: 0.5, // Trigger when 50% of the section is in the viewport
+  // Separate useInView hooks for each section
+  const { ref: titleRef, inView: titleInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  
+  const { ref: card1Ref, inView: card1InView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  
+  const { ref: card2Ref, inView: card2InView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  
+  const { ref: card3Ref, inView: card3InView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  
+  const { ref: imageRef, inView: imageInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
   });
 
   return (
-    <div className="w-full h-[100vh]  flex flex-col items-center gap-14">
+    <div className="w-full h-[100vh] flex flex-col items-center gap-14">
       <div className="w-full h-full bg-white flex items-center justify-between p-5">
         <div className="flex flex-col items-start gap-14 w-2/4">
           {/* Title and Divider */}
           <motion.div
-            ref={inViewRef}
+            ref={titleRef}
             initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
+            animate={{ opacity: titleInView ? 1 : 0, x: titleInView ? 0 : -100 }}
+            transition={{ duration: 0.6 }}
             className="flex flex-col items-start gap-3"
           >
             <h1 className="text-4xl font-extrabold">What makes us Different?</h1>
@@ -32,10 +52,10 @@ const Unique = () => {
           <div className="flex flex-col items-start gap-4 w-full p-5">
             {/* Card 1 */}
             <motion.div
-              ref={inViewRef}
+              ref={card1Ref}
               initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
+              animate={{ opacity: card1InView ? 1 : 0, x: card1InView ? 0 : -100 }}
+              transition={{ duration: 0.5,delay:0.1 }}
               className="w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
             >
               <div className="flex items-start gap-6 p-3">
@@ -50,10 +70,10 @@ const Unique = () => {
             {/* Card 2 */}
             <div className="w-full flex items-center justify-end">
               <motion.div
-                ref={inViewRef}
+                ref={card2Ref}
                 initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 100 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
+                animate={{ opacity: card2InView ? 1 : 0, x: card2InView ? 0 : 100 }}
+                transition={{ duration: 0.5,delay:0.1 }}
                 className="w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
               >
                 <div className="flex items-start gap-6 p-3">
@@ -68,10 +88,10 @@ const Unique = () => {
 
             {/* Card 3 */}
             <motion.div
-              ref={inViewRef}
+              ref={card3Ref}
               initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
+              animate={{ opacity: card3InView ? 1 : 0, x: card3InView ? 0 : -100 }}
+              transition={{ duration: 0.5,delay:0.1 }}
               className="w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
             >
               <div className="flex items-start gap-6 p-3">
@@ -87,10 +107,10 @@ const Unique = () => {
 
         {/* Image Section with Slide In Animation */}
         <motion.div
-          ref={inViewRef}
-          initial={{ opacity: 0, x: 100 }} // Start offscreen to the right
-          animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 100 }} // Slide in to the left
-          transition={{ delay: 0.7, duration: 0.6 }}
+          ref={imageRef}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: imageInView ? 1 : 0, x: imageInView ? 0 : 100 }}
+          transition={{ duration: 0.6 }}
           className="w-3/5 h-3/4"
         >
           <Image
