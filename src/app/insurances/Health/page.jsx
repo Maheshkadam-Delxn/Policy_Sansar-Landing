@@ -1,17 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import h1 from "../../../../public/insurance/h1.png";
-// import HealthImg from "../../../../public/insurance/health-insurance.jpeg";
 import HealthImg from "../../../../public/insurance/health.png";
 
-// import HomeImg from "../../../../public/insurance/home-insurance.jpeg";
-// import travelImg from "../../../../public/insurance/travel-insurance.jpeg";
 
 
 const HealthInsurance = () => {
   return (
-    <div className="">
-    <div className="container mx-auto p-6 flex flex-col md:flex-row items-center gap-8">
+    <div className="mt-12 flex flex-col items-center gap-10">
+      <div className='w-full flex items-center justify-center'>
+      <div className="container mx-auto p-6 flex flex-col md:flex-row items-center gap-8  w-5/6">
       <div className="w-full md:w-2/3">
         <h1 className="text-3xl font-bold text-blue-700 mb-6">Health Insurance</h1>
         <p className="text-gray-700 mb-4">
@@ -26,8 +24,8 @@ const HealthInsurance = () => {
       </div>
       
       <div className="w-full md:w-1/3 relative">
-        <div className="relative w-full h-64 rounded overflow-hidden group shadow-lg">
-          <Image src={h1} alt="Health Insurance" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75" />
+        <div className="relative w-full h-64 rounded overflow-hidden group shadow-lg rounded-3xl">
+          <Image src={h1} alt="Health Insurance" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75 rounded-3xl" />
           <div className="absolute inset-0 bg-green-500 bg-opacity-60 flex items-center justify-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
             <p className="text-white font-semibold px-4">Protect your health and finances with our tailored health insurance plans. Get the best medical care without financial stress.</p>
           </div>
@@ -36,8 +34,12 @@ const HealthInsurance = () => {
 
       
     </div>
+      </div>
+  
     {/* Additional Information Section */}
-    <div className="mt-12 p-6 bg-gray-100 rounded-lg shadow-md h-full">
+    <div className='w-full flex items-center justify-center'>
+    <div className=" p-6 bg-gray-100 rounded-lg shadow-md h-full flex flex-col  items-center justify-center w-5/6 ">
+        <div className='flex flex-col items-start  justify-center  p-6'>
         <h2 className="text-2xl font-bold text-blue-700 mb-4">Why Choose Health Insurance?</h2>
         <p className="text-gray-700 mb-4">
           Health insurance not only covers hospitalization expenses but also offers preventive healthcare benefits, including routine check-ups and vaccinations. It ensures you receive timely medical attention without worrying about the costs.
@@ -45,6 +47,7 @@ const HealthInsurance = () => {
         <p className="text-gray-700 mb-4">
           Our plans are designed to suit individuals, families, and senior citizens, providing customized coverage as per your needs. Enjoy cashless treatments and extensive medical benefits with Policy Sansar.
         </p>
+        </div>
         <div className="relative w-full h-48 rounded overflow-hidden group shadow-lg mt-6">
           <Image src={HealthImg} alt="Health Insurance Benefits" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75" />
           <div className="absolute inset-0 bg-green-500 bg-opacity-60 flex items-center justify-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
@@ -52,6 +55,7 @@ const HealthInsurance = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

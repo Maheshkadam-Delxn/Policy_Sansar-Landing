@@ -5,8 +5,9 @@ import l1 from "../../../../public/insurance/l1.png";
 
 const LifeInsurance = () => {
   return (
-    <div className="">
-    <div className="container mx-auto p-6 flex flex-col md:flex-row items-center gap-8">
+
+    <div className="w-full flex flex-col items-center gap-10">
+      <div className='w-full flex items-center justify-center'><div className="container mx-auto p-6 flex flex-col md:flex-row items-center gap-8 w-5/6">
       <div className="w-full md:w-2/3">
         <h1 className="text-3xl font-bold text-blue-700 mb-6">Life Insurance</h1>
         <p className="text-gray-700 mb-4">
@@ -22,7 +23,7 @@ const LifeInsurance = () => {
       
       <div className="w-full md:w-1/3 relative">
         <div className="relative w-full h-64 rounded overflow-hidden group shadow-lg">
-          <Image src={l1}  alt="Life Insurance" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75" />
+          <Image src={l1}  alt="Life Insurance" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75 rounded-3xl" />
           <div className="absolute inset-0 bg-blue-600 bg-opacity-60 flex items-center justify-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
             <p className="text-white font-semibold px-4">Secure your family’s financial future with our trusted life insurance plans. Get flexible coverage tailored to your needs.</p>
           </div>
@@ -31,8 +32,9 @@ const LifeInsurance = () => {
 
       {/* Additional Information Section */}
 
-    </div>
-          <div className="mt-12 p-6 bg-gray-100 rounded-lg shadow-md">
+    </div></div>
+    
+          <div className=" p-6 bg-gray-100 rounded-lg shadow-md w-5/6 ">
           <h2 className="text-2xl font-bold text-blue-700 mb-4">Why Choose Life Insurance?</h2>
           <p className="text-gray-700 mb-4">
             Life insurance provides peace of mind, knowing that your family will be financially protected in times of need. It helps cover funeral expenses, outstanding debts, and ensures your loved ones maintain their standard of living.
