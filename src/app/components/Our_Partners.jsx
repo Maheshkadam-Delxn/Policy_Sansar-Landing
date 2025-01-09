@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 const Our_Partners = () => {
   const partners = [
-    { id: 1, img: '/providers/bajaj.png', name: 'Partner 1' },
+    // { id: 1, img: '/providers/bajaj.png', name: 'Partner 1' },
     { id: 2, img: '/providers/hdfc.png', name: 'Partner 2' },
     { id: 3, img: '/providers/icic.png', name: 'Partner 3' },
     { id: 4, img: '/providers/kotak-genera..png', name: 'Partner 4' },

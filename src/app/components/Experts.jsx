@@ -5,7 +5,7 @@ import Person3 from "../../../public/icons/person3.png"
 import Image from 'next/image'
 const Experts = () => {
   return (
-    <div className='mt-12 flex flex-col items-center justify-center  gap-24 h-[100vh] '>
+    <div name="about" className='mt-12 flex flex-col items-center justify-center  gap-24 h-[100vh] '>
       {/* Header Section */}
       <div className="flex items-center justify-center gap-4">
         <hr className="border-gray-300 w-64" />

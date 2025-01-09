@@ -10,7 +10,7 @@ import Link from 'next/link'
 import General from '../insurances/General/page.jsx'
 const Insurances = () => {
   return (
-    <div className='mt-12 flex flex-col gap-24 h-[100vh] items-center justify-center'>
+    <div name="explore" className='mt-12 flex flex-col gap-24 h-[100vh] items-center justify-center'>
       <div className="flex items-center justify-center gap-4">
         <hr className=" border-gray-300 w-64" />
         <h2 className="text-center font-bold text-2xl">Explore our Insurance Plans</h2>

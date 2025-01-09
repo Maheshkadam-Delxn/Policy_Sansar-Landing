@@ -5,7 +5,7 @@ import callicon from "../../../public/icons/call.png"
 
 const Contact = () => {
   return (
-    <div className='mt-12 h-[120vh]  flex  flex-col items-center justify-center gap-12 p-10 bg-white'>
+    <div name="contact" className='mt-12 h-[120vh]  flex  flex-col items-center justify-center gap-12 p-10 bg-white'>
       <div className="flex items-center justify-center gap-4">
         <hr className=" border-gray-300 w-64" />
         <h2 className="text-center font-bold text-2xl">Contact Us</h2>
