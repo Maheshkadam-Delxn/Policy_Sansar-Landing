@@ -4,7 +4,7 @@ import { FaXTwitter, FaLinkedinIn, FaFacebook, FaInstagram } from "react-icons/f
 import { IoCallSharp, IoMailOpenSharp, IoLocationSharp } from "react-icons/io5";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { useInView } from "react-intersection-observer"; // Importing useInView
-
+import Link1 from "next/link";
 const Footer = () => {
   const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
   const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true });
@@ -29,16 +29,16 @@ const Footer = () => {
             PolicySansar
           </h1>
           <div className="flex items-center gap-3">
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
+            <div className="p-3 rounded-full  border border-x-2 border-y-2 border-white hover:border-[#1D951B] hover:bg-[#1D951B] hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
               <FaXTwitter />
             </div>
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] hover:bg-[#1D951B] hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
               <FaLinkedinIn />
             </div>
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] hover:bg-[#1D951B] hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
               <FaFacebook />
             </div>
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] hover:bg-[#1D951B] hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
               <FaInstagram />
             </div>
           </div>
@@ -64,22 +64,18 @@ const Footer = () => {
             >
               Explore
             </Link>
-            <Link
-              to="about"
-              smooth={true}
-              duration={1000}
+            <Link1
+              href={"/about-us"}
               className="cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
             >
               About-us
-            </Link>
-            <Link
-              to="contact"
-              smooth={true}
-              duration={1000}
+            </Link1>
+            <Link1
+              href={"/contact"}
               className="cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
             >
               Contact-us
-            </Link>
+            </Link1>
           </div>
 
           <div
