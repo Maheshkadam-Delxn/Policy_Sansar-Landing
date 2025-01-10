@@ -59,18 +59,20 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Google Form Embed Section */}
           <div className="bg-white w-full sm:w-1/2 h-auto p-6 sm:p-8 flex flex-col items-start justify-center gap-6 sm:gap-12 rounded-2xl border border-gray-400">
             <p className="text-xl sm:text-2xl font-bold">Get in Touch</p>
-            <form className="flex flex-col gap-4 w-full">
-              <input type="text" placeholder="Your Name" className="p-3 rounded-lg border border-gray-400 outline-none w-full" required />
-              <input type="email" placeholder="Your Email" className="p-3 rounded-lg border border-gray-400 outline-none w-full" required />
-              <input type="number" placeholder="Your Mobile No" className="p-3 rounded-lg border border-gray-400 outline-none w-full" required />
-              <textarea placeholder="Your Message" className="p-3 rounded-lg border border-gray-400 outline-none w-full" rows="5" required></textarea>
-              <button type="submit" className="bg-blue-500 text-white font-bold p-3 rounded-lg border-2 border-blue-500 hover:bg-white hover:text-blue-500 transition duration-300">
-                Send Message
-              </button>
-            </form>
+            <iframe 
+  src="https://docs.google.com/forms/d/e/1FAIpQLSfA_lb0gzs4Pk2k_8gN0atWHIXCb6820M_AUCw5T6G_y7QM4A/viewform?embedded=true"
+  width="100%" 
+  height="600px"
+  className="rounded-lg border border-gray-400"
+ 
+>
+  Loading…
+</iframe>
+
+          
           </div>
 
         </div>
