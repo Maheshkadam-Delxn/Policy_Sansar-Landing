@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} bg-gradient-to-r from-[#CEFCFF] via-[#D5F5F9] to-[#FFFFFF]`}
+        className={`${montserrat.className} bg-gradient-to-r from-[#CEFCFF] via-[#D5F5F9] to-[#FFFFFF]  `}
       >
         <Header />
         {children}
