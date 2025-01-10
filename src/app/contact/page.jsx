@@ -7,7 +7,7 @@ import callbanner from '../../../public/coverimg/call.png';
 
 const Contact = () => {
   return (
-    <>
+    <div className='overflow-hidden'>
       <div className="w-full h-56 bg-black  relative">
         <Image
           src={callbanner}
@@ -15,14 +15,14 @@ const Contact = () => {
           objectFit="cover"
           alt="Call Banner"
         />
-          <div className="absolute inset-0 bg-black opacity-40"></div>
+          <div className="absolute inset-0 bg-black opacity-40 "></div>
         <div className="absolute inset-0 flex items-center pl-16 text-white">
-          <h1 className="text-2xl font-bold">Contact Us</h1>
+          <h1 className="text-2xl   font-bold">Contact Us</h1>
         </div>
       </div>
     
 
-      <div name="contact" className=' h-auto flex flex-col items-center justify-center gap-12 p-10 bg-white'>
+      <div name="contact" className=' h-auto flex flex-col items-center justify-center gap-12 p-10 bg-white '>
         <AnimatedHeader text="Contact Us" />
 
         {/* Parent div with responsive design */}
@@ -36,8 +36,8 @@ const Contact = () => {
             </div>
 
             {/* Email and Mobile Number */}
-            <div className="flex items-center justify-between w-full">
-              <div className="flex items-center justify-center gap-2">
+            <div className="md:flex md:items-center md:justify-between md:w-full xxs:flex-col xxs:items-start p-2 ">
+              <div className="flex items-center justify-center gap-2 ">
                 <Image
                   width={25}
                   height={25}
@@ -55,7 +55,9 @@ const Contact = () => {
                   alt="Phone Icon"
                   className="w-full h-full rounded-lg object-contain"
                 />
-                <p>+91_9922949596</p>
+                <p className='flex'>
+                  <span>+91{" "}</span> <span>9922949596</span>
+                  </p>
               </div>
             </div>
 
@@ -88,7 +90,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
