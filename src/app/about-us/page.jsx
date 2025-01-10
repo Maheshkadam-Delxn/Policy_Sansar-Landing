@@ -114,7 +114,7 @@ const Experts = () => {
         />
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="absolute inset-0 flex items-center pl-16 text-white">
-          <h1 className="text-2xl font-bold">About Us</h1>
+          <h1 className="text-2xl  font-bold">About Us</h1>
         </div>
       </div>
 
@@ -163,7 +163,7 @@ const Experts = () => {
           {tabData.map((tab, index) => (
             <button
               key={index}
-              className={`w-full px-6 py-6 text-left text-lg font-semibold transition-all ease-in-out duration-500  border-b rounded-3xl ${
+              className={`w-full px-6 py-6 text-left text-lg xxs:text-xs font-semibold transition-all ease-in-out duration-500  border-b rounded-3xl ${
                 activeIndex === index
                   ? "bg-[#164574] text-white"
                   : "text-gray-800 hover:bg-gray-200"
@@ -186,7 +186,7 @@ const Experts = () => {
         >
           <div className="flex items-center gap-4">
             {tabData[activeIndex].icon}
-            <h2 className="text-2xl font-bold text-[#164574]">{tabData[activeIndex].title}</h2>
+            <h2 className="text-2xl xxs:text-sm font-bold text-[#164574]">{tabData[activeIndex].title}</h2>
           </div>
           {tabData[activeIndex].content}
         </motion.div>

@@ -7,20 +7,20 @@ import travelImg from "../../../../public/insurance/travel-insurance.jpeg";
 
 const GeneralInsurance = () => {
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-6 xxs:p-2">
       <div className="flex items-center justify-center">
-        <div className="w-3/4">
+        <div className="w-3/4 md:w-3/4 xxs:w-full">
           <h1 className="text-3xl font-bold text-center text-blue-700 mb-6">
             General Insurance
           </h1>
           <div>
-            <p className="text-start text-gray-700 mb-4">
+            <p className=" text-gray-700 mb-4 text-justify">
               General insurance provides financial protection against unforeseen
               losses, including health issues, vehicle damages, property loss, and
               travel uncertainties. It ensures that individuals and businesses
               remain financially stable during emergencies.
             </p>
-            <p className="text-start text-gray-700 mb-8">
+            <p className=" text-gray-700 mb-8 text-justify">
               At Policy Sansar, we are committed to providing full support to our
               customers by offering a wide range of general insurance services. We
               help you choose the best policy tailored to your needs while
@@ -58,12 +58,12 @@ const GeneralInsurance = () => {
         ].map((item, index) => (
           <div
             key={index}
-            className={`w-full md:w-3/4 flex flex-col md:flex-row items-center gap-6 p-6   ${index % 2 === 0 ? 'md:flex-row-reverse ' : ''}`}
+            className={`w-full md:w-3/4 flex flex-col-reverse md:flex-row items-center gap-6 p-6 xxs:p-2  xxs:w-full ${index % 2 === 0 ? 'md:flex-row-reverse ' : ''}`}
           >
             <div className="flex-1">
               <h2 className="text-xl font-semibold text-start">{item.title}</h2>
-              <p className="text-gray-700 mt-4">{item.desc}</p>
-              <p className="text-gray-700 mt-4">{item.extra}</p>
+              <p className="text-gray-700 mt-4 text-justify">{item.desc}</p>
+              <p className="text-gray-700 mt-4 text-justify">{item.extra}</p>
             </div>
             <div className="relative flex-1 w-full h-48 md:h-full ">
               <Image
