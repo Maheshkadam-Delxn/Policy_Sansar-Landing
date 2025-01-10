@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Logo from "../../../public/insurance/logo.png";
 import Link1 from "next/link";
 import Image from "next/image";
+import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosArrowForward } from "react-icons/io";
@@ -84,44 +85,84 @@ const Header = () => {
         {/* Navigation Links */}
         {/* For larger screens */}
         <div className="hidden lg:flex gap-8">
-          {["Home", "Explore", "About-us", "Contact-us"].map((item, index) => (
-            <Link1
-              key={index}
-              href={item === "Explore" ? "#explore" : `/${item.toLowerCase()}`}
-              className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
-            >
-              {item}
-            </Link1>
-          ))}
+        <Link1
+             href={"/"}
+             onClick={closeMenu} // Close the menu on link click
+             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+           >
+             Home
+           </Link1>
+           <Link
+             to="explore"
+             smooth={true}
+             duration={1000}
+             onClick={closeMenu} // Close the menu on link click
+             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+           >
+             Explore
+           </Link>
+           <Link1
+             href="/about-us"
+             onClick={closeMenu} // Close the menu on link click
+             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+           >
+             About-us
+           </Link1>
+           <Link1
+             href="/contact"
+             onClick={closeMenu} // Close the menu on link click
+             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+           >
+             Contact-us
+           </Link1>
         </div>
 
         {/* For smaller screens */}
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.div
-              ref={menuRef}
-              className="absolute top-20 right-0 xxs:h-screen w-3/4 bg-white flex flex-col gap-4 items-end p-5 shadow-md z-50 lg:hidden"
-              variants={menuVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-            >
-              {["Home", "Explore", "About-us", "Contact-us"].map(
-                (item, index) => (
-                  <Link1
-                    key={index}
-                    href={
-                      item === "Explore" ? "#explore" : `/${item.toLowerCase()}`
-                    }
-                    onClick={closeMenu}
-                    className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B] px-4 py-2 rounded-md"
-                  >
-                    {item}
-                  </Link1>
-                )
-              )}
-            </motion.div>
+           <motion.div
+           ref={menuRef}
+           className={`${
+             isMenuOpen ? "block" : "hidden"
+           } absolute lg:relative top-28 right-0 xxs:top-20 lg:top-auto md:h-auto lg:h-auto xl:h-auto 2xl:h-auto xxs:h-screen w-3/4 lg:w-auto bg-white lg:bg-transparent lg:flex lg:items-center flex flex-col lg:flex-row gap-4 sm:gap-8 items-end p-5 shadow-md lg:shadow-none z-50`}
+           variants={menuVariants}
+           initial="hidden"
+           animate="visible"
+           exit="exit"
+           transition={{ duration: 0.5, ease: "easeInOut" }}
+         >
+           <Link1
+             href={"/"}
+             onClick={closeMenu} // Close the menu on link click
+             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+           >
+             Home
+           </Link1>
+           <Link
+             to="explore"
+             smooth={true}
+             duration={1000}
+             onClick={closeMenu} // Close the menu on link click
+             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+           >
+             Explore
+           </Link>
+           <Link1
+             href="/about-us"
+             onClick={closeMenu} // Close the menu on link click
+             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+           >
+             About-us
+           </Link1>
+           <Link1
+             href="/contact"
+             onClick={closeMenu} // Close the menu on link click
+             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+           >
+             Contact-us
+           </Link1>
+         </motion.div>
+         
           )}
         </AnimatePresence>
       </div>
