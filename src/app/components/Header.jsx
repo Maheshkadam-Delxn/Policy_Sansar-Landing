@@ -56,16 +56,16 @@ const Header = () => {
         {/* Logo Section */}
         <Link1
           href={"/"}
-          className="text-2xl font-bold text-black tracking-wide flex items-center gap-3"
+          className="text-2xl font-bold text-black tracking-wide flex items-center gap-3 w-1/2 "
         >
           <Image
             src={Logo}
             width={logoSize}
             height={logoSize}
             alt="Logo"
-            className="transition-all ease-in-out duration-300 xxs:w-16 xxs:h-16 xs:w-16 xs:h-16 sm:w-16 sm:h-16"
+            className="transition-all ease-in-out duration-300 xxs:w-16 xxs:h-16 xs:w-16 xs:h-16 sm:w-16 sm:h-16 md:w-1/4 md:h-full lg:w-1/4 lg:h-full xl:w-1/4 xl:h-full 2xl:w-1/4 2xl:h-full"
           />
-          <h1 className="text-2xl text-[#1D951B] xxs:text-lg xs:text-lg sm:text-lg">
+          <h1 className="text-2xl text-[#1D951B] xxs:text-xs xs:text-sm sm:text-sm md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl xxs:w-full xs:w-full sm:w-full">
             Policy Sansar
           </h1>
         </Link1>
