@@ -93,7 +93,7 @@ const Header = () => {
           ref={menuRef}
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } absolute lg:relative top-28 xxs:top-20 lg:top-auto left-0 w-full  lg:w-auto bg-white lg:bg-transparent lg:flex lg:items-center flex flex-col lg:flex-row gap-4 sm:gap-8 items-end p-5 shadow-md lg:shadow-none z-50`}
+          } absolute lg:relative top-28 right-0 xxs:top-20 lg:top-auto md:h-auto lg:h-auto xl:h-auto 2xl:h-auto xxs:h-screen w-3/4  lg:w-auto bg-white lg:bg-transparent lg:flex lg:items-center flex flex-col lg:flex-row gap-4 sm:gap-8 items-end p-5 shadow-md lg:shadow-none z-50`}
         >
           <Link1
             href={"/"}
