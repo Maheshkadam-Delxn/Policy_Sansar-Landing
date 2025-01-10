@@ -8,17 +8,30 @@ export default {
   theme: {
     extend: {
       animation: {
-        scroll: 'scroll 20s linear infinite',
+        scroll: 'scroll 30s linear infinite',
       },
       keyframes: {
         scroll: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        phonescroll: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-200%)' },
         },
       },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      screens: {
+        xxs:'320px',
+        xs: '475px',  // Extra small screens, e.g., small phones
+        sm: '640px',  // Small devices like phones
+        md: '768px',  // Medium devices like tablets
+        lg: '1024px', // Large devices like laptops
+        xl: '1280px', // Extra large devices like desktops
+        '2xl': '1536px', // Extra extra large screens
       },
     },
   },

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from 'react';
 import Image from 'next/image';
 import GeneralImg from "../../../public/insurance/general.png";
@@ -8,7 +8,7 @@ import GeneralIcon from "../../../public/icons/generalIcon.png";
 import HealthIcon from "../../../public/icons/healthIcon.png";
 import LifeIcon from "../../../public/icons/lifeIcon.png";
 import Link from 'next/link';
-import { motion } from 'framer-motion'; // Import useInView
+import { motion } from 'framer-motion'; 
 import { useInView } from 'react-intersection-observer';
 import AnimatedHeader from './AnimatedHeader';
 
@@ -18,9 +18,9 @@ const Insurances = () => {
   const { ref: lifeRef, inView: lifeInView } = useInView({ triggerOnce: true, threshold: 0.5 });
 
   return (
-    <div name="explore" className='mt-12 flex flex-col gap-24 h-[100vh] items-center justify-center'>
-      <AnimatedHeader  text="Explore Our Insurance Plans" />
-      <div className='flex items-center justify-center w-full gap-10 p-5'>
+    <div name="explore" className='mt-12 flex flex-col gap-24 min-h-[100vh] items-center justify-center  '>
+      <AnimatedHeader text="Explore Our Insurance Plans" />
+      <div className='flex flex-wrap items-center justify-center w-full gap-4 p-5 xxs:flex-col xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row'>
         
         {/* General Insurance Card */}
         <motion.div 
@@ -28,7 +28,7 @@ const Insurances = () => {
           initial={{ opacity: 0, y: 50 }} 
           animate={{ opacity: generalInView ? 1 : 0, y: generalInView ? 0 : 50 }} 
           transition={{ delay: 0.2, duration: 0.6 }}
-          className='relative w-1/4 bg-white rounded-lg h-96 shadow-lg border border-x border-y border-slate-200 overflow-hidden group'
+          className='relative w-full md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4  bg-white rounded-lg h-96 shadow-lg border border-x border-y border-slate-200 overflow-hidden group'
         >
           <Link href={'../insurances/General'}>
             <Image
@@ -39,7 +39,7 @@ const Insurances = () => {
               className='w-full h-3/4 object-cover rounded-t-lg group-hover:opacity-50'
             />
             <div className='w-full flex flex-col items-center gap-2 p-3 h-1/4'>
-              <div className='w-full flex items-center gap-3 justify-center h-full '>
+              <div className='w-full flex items-center gap-3 justify-center h-full'>
                 <Image 
                   src={GeneralIcon}
                   width={30}
@@ -64,7 +64,7 @@ const Insurances = () => {
           initial={{ opacity: 0, y: 50 }} 
           animate={{ opacity: healthInView ? 1 : 0, y: healthInView ? 0 : 50 }} 
           transition={{ delay: 0.4, duration: 0.6 }}
-          className='relative w-1/4 bg-white rounded-lg h-96 shadow-lg border border-x border-y border-slate-200 overflow-hidden group'
+          className='relative w-full md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4 bg-white rounded-lg h-96 shadow-lg border border-x border-y border-slate-200 overflow-hidden group'
         >
           <Link href={"../insurances/Health"}>
             <Image
@@ -75,7 +75,7 @@ const Insurances = () => {
               className='w-full h-3/4 object-cover rounded-t-lg group-hover:opacity-50'
             />
             <div className='w-full flex flex-col items-center gap-2 p-3 h-1/4'>
-              <div className='w-full flex items-center gap-3 justify-center h-full '>
+              <div className='w-full flex items-center gap-3 justify-center h-full'>
                 <Image 
                   src={HealthIcon}
                   width={30}
@@ -100,7 +100,7 @@ const Insurances = () => {
           initial={{ opacity: 0, y: 50 }} 
           animate={{ opacity: lifeInView ? 1 : 0, y: lifeInView ? 0 : 50 }} 
           transition={{ delay: 0.6, duration: 0.6 }}
-          className='relative w-1/4 bg-white rounded-lg h-96 shadow-lg border border-x border-y border-slate-200 overflow-hidden group'
+          className='relative w-full md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4 bg-white rounded-lg h-96 shadow-lg border border-x border-y border-slate-200 overflow-hidden group'
         >
           <Link href={"../insurances/Life"}>
             <Image
@@ -111,7 +111,7 @@ const Insurances = () => {
               className='w-full h-3/4 object-cover rounded-t-lg group-hover:opacity-50'
             />
             <div className='w-full flex flex-col items-center gap-2 p-3 h-1/4'>
-              <div className='w-full flex items-center gap-3 justify-center h-full '>
+              <div className='w-full flex items-center gap-3 justify-center h-full'>
                 <Image 
                   src={LifeIcon}
                   width={30}
