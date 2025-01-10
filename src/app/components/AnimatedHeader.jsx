@@ -13,13 +13,13 @@ const AnimatedHeader = ({ text }) => {
     <div ref={ref} className="flex items-center justify-center gap-4">
       {/* Animated <hr> elements */}
       <motion.hr
-        className="border-gray-300 w-64"
+        className="border-gray-300 w-64 "
         initial={{ width: 0 }}
         animate={{ width: inView ? '16rem' : 0 }}
         transition={{ duration: 1 }}
       />
       <motion.h2
-        className="text-center font-bold text-2xl"
+        className="text-center font-bold text-2xl xs:text-lg sm:text-lg xxs:text-lg"
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: inView ? 0 : -100, opacity: inView ? 1 : 0 }}
         transition={{ duration: 1, delay: 0.2 }}
@@ -27,7 +27,7 @@ const AnimatedHeader = ({ text }) => {
         {text}
       </motion.h2>
       <motion.hr
-        className="border-gray-300 w-64"
+        className="border-gray-300 w-64 "
         initial={{ width: 0 }}
         animate={{ width: inView ? '16rem' : 0 }}
         transition={{ duration: 1 }}
