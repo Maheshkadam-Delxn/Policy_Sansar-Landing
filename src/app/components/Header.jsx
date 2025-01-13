@@ -9,7 +9,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosArrowForward } from "react-icons/io";
 
 const Header = () => {
-  const [logoSize, setLogoSize] = useState(130); // Initial logo size in px
+  const [logoSize, setLogoSize] = useState(120); // Initial logo size in px
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Menu open state
   const menuRef = useRef(null); // Ref for menu
 
@@ -39,7 +39,7 @@ const Header = () => {
         if (scrollPosition > 2) {
           setLogoSize(Math.max(50, 130 - scrollPosition)); // Decrease logo size smoothly
         } else {
-          setLogoSize(130); // Reset to default size smoothly
+          setLogoSize(120); // Reset to default size smoothly
         }
       }
     };
@@ -69,9 +69,9 @@ const Header = () => {
             width={logoSize}
             height={logoSize}
             alt="Logo"
-            className="transition-all ease-in-out duration-300 xxs:w-1/3 xs:w-1/3 sm:w-1/3"
+            className="transition-all ease-in-out duration-300 "
           />
-          <h1 className="text-2xl text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm">Policy Sansar</h1>
+          <h1 className="text-2xl text-[#1D951B] ">Policy Sansar</h1>
         </Link1>
 
         {/* Hamburger or Back Button */}
