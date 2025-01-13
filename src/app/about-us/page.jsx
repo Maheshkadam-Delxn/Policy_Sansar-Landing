@@ -9,6 +9,8 @@ import Person3 from "../../../public/experts/ajay.png";
 import { motion } from "framer-motion";
 import { FaEye, FaBullseye } from "react-icons/fa";
 import CoreValue from "../components/CoreValue";
+import AnimatedHeader from '../components/AnimatedHeader.jsx';
+
 
 const Experts = () => {
   const teamMembers = [
@@ -40,6 +42,8 @@ const Experts = () => {
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="absolute inset-0 flex items-center pl-16 text-white">
           <h1 className="text-2xl font-bold">About Us</h1>
+          {/* <AnimatedHeader text="Explore Our Insurance Plans" /> */}
+
         </div>
       </div>
 
@@ -79,6 +83,10 @@ const Experts = () => {
       {/* Team Section */}
       <div className="mt-12 flex flex-col items-center gap-8 px-8 mb-12">
         <h2 className="text-3xl font-bold text-[#164574]">Meet Our Experts</h2>
+        {/* <h2 className="text-[#164574]  font-bold text-3xl">
+        <AnimatedHeader text="Meet Our Experts"  className="!text-3xl  "/>
+        </h2> */}
+
         {teamMembers.map((member, index) => (
           <div
             key={index}
@@ -111,7 +119,7 @@ const Experts = () => {
       </div>
 
      {/* Vision & Mission Section */}
-<div className="relative w-full h-96 bg-cover bg-center" style={{ backgroundImage: `url(${aboutcover.src})` }}>
+<div className="relative w-full  md:h-96 xxs:min-h-[24rem] bg-cover bg-center" style={{ backgroundImage: `url(${aboutcover.src})` }}>
   <div className="absolute inset-0 bg-black opacity-70"></div>
 
   <div className="relative flex flex-col md:flex-row items-center justify-center gap-8 text-white w-full h-full px-8">
