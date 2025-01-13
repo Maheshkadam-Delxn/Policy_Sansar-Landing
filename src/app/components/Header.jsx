@@ -7,8 +7,9 @@ import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosArrowForward } from "react-icons/io";
+
 const Header = () => {
-  const [logoSize, setLogoSize] = useState(100); // Initial logo size in px
+  const [logoSize, setLogoSize] = useState(130); // Initial logo size in px
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Menu open state
   const menuRef = useRef(null); // Ref for menu
 
@@ -31,10 +32,15 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      if (scrollPosition > 2) {
-        setLogoSize(Math.max(50, 100 - scrollPosition)); // Logo size decreases from 100px to 50px
-      } else {
-        setLogoSize(100); // Reset to 100px when scrolled to top
+      const screenWidth = window.innerWidth; // Get the screen width
+
+      // Apply scroll effect only for large screens (md to 2xl)
+      if (screenWidth >= 768) {
+        if (scrollPosition > 2) {
+          setLogoSize(Math.max(50, 100 - scrollPosition)); // Decrease logo size
+        } else {
+          setLogoSize(130); // Reset to default size
+        }
       }
     };
 
@@ -63,11 +69,9 @@ const Header = () => {
             width={logoSize}
             height={logoSize}
             alt="Logo"
-            className="transition-all ease-in-out duration-300 xxs:w-16 xxs:h-16 xs:w-16 xs:h-16 sm:w-16 sm:h-16 md:w-1/4 md:h-full lg:w-1/4 lg:h-full xl:w-1/4 xl:h-full 2xl:w-1/4 2xl:h-full"
+            className="transition-all ease-in-out duration-300"
           />
-          <h1 className="text-2xl text-[#1D951B] xxs:text-xs xs:text-sm sm:text-sm md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl xxs:w-full xs:w-full sm:w-full">
-            Policy Sansar
-          </h1>
+          <h1 className="text-2xl text-[#1D951B]">Policy Sansar</h1>
         </Link1>
 
         {/* Hamburger or Back Button */}
@@ -76,95 +80,46 @@ const Header = () => {
           className="block lg:hidden text-black focus:outline-none"
         >
           {isMenuOpen ? (
-           <IoIosArrowForward className="text-2xl font-extrabold"/>
+            <IoIosArrowForward className="text-2xl font-extrabold" />
           ) : (
-            <RxHamburgerMenu className="text-2xl font-extrabold"/>
+            <RxHamburgerMenu className="text-2xl font-extrabold" />
           )}
         </button>
 
         {/* Navigation Links */}
         {/* For larger screens */}
         <div className="hidden lg:flex gap-8">
-        <Link1
-             href={"/"}
-             onClick={closeMenu} // Close the menu on link click
-             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
-           >
-             Home
-           </Link1>
-           <Link
-             to="explore"
-             smooth={true}
-             duration={1000}
-             onClick={closeMenu} // Close the menu on link click
-             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
-           >
-             Explore
-           </Link>
-           <Link1
-             href="/about-us"
-             onClick={closeMenu} // Close the menu on link click
-             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
-           >
-             About-us
-           </Link1>
-           <Link1
-             href="/contact"
-             onClick={closeMenu} // Close the menu on link click
-             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
-           >
-             Contact-us
-           </Link1>
+          <Link1
+            href={"/"}
+            onClick={closeMenu}
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+          >
+            Home
+          </Link1>
+          <Link
+            to="explore"
+            smooth={true}
+            duration={1000}
+            onClick={closeMenu}
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+          >
+            Explore
+          </Link>
+          <Link1
+            href="/about-us"
+            onClick={closeMenu}
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+          >
+            About-us
+          </Link1>
+          <Link1
+            href="/contact"
+            onClick={closeMenu}
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+          >
+            Contact-us
+          </Link1>
         </div>
-
-        {/* For smaller screens */}
-        <AnimatePresence>
-          {isMenuOpen && (
-           <motion.div
-           ref={menuRef}
-           className={`${
-             isMenuOpen ? "block" : "hidden"
-           } absolute lg:relative top-28 right-0 xxs:top-20 lg:top-auto md:h-auto lg:h-auto xl:h-auto 2xl:h-auto xxs:h-screen w-3/4 lg:w-auto bg-white lg:bg-transparent lg:flex lg:items-center flex flex-col lg:flex-row gap-4 sm:gap-8 items-end p-5 shadow-md lg:shadow-none z-50`}
-           variants={menuVariants}
-           initial="hidden"
-           animate="visible"
-           exit="exit"
-           transition={{ duration: 0.5, ease: "easeInOut" }}
-         >
-           <Link1
-             href={"/"}
-             onClick={closeMenu} // Close the menu on link click
-             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
-           >
-             Home
-           </Link1>
-           <Link
-             to="explore"
-             smooth={true}
-             duration={1000}
-             onClick={closeMenu} // Close the menu on link click
-             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
-           >
-             Explore
-           </Link>
-           <Link1
-             href="/about-us"
-             onClick={closeMenu} // Close the menu on link click
-             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
-           >
-             About-us
-           </Link1>
-           <Link1
-             href="/contact"
-             onClick={closeMenu} // Close the menu on link click
-             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
-           >
-             Contact-us
-           </Link1>
-         </motion.div>
-         
-          )}
-        </AnimatePresence>
       </div>
     </div>
   );

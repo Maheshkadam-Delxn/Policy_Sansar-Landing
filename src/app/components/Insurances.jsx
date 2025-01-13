@@ -72,7 +72,7 @@ const Insurances = () => {
               alt='Health Insurance'
               width={1440}
               height={1080}
-              className='w-full h-3/4 object-cover rounded-t-lg group-hover:opacity-50'
+              className='w-full h-3/4  object-cover md:h-3/4 rounded-t-lg group-hover:opacity-50'
             />
             <div className='w-full flex flex-col items-center gap-2 p-3 h-1/4'>
               <div className='w-full flex items-center gap-3 justify-center h-full'>
