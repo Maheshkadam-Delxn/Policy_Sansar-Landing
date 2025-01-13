@@ -22,7 +22,7 @@ const CoreValue = () => {
         {coreValues.map((value, index) => (
           <motion.div
             key={index}
-            className="relative w-96 h-60 text-black rounded-lg overflow-hidden group bg-white"
+            className="relative w-96 h-80 text-black rounded-lg overflow-hidden group bg-white"
             whileHover={{ scale: 1.05 }}
           >
             {/* Background Image Fade and Scale */}
@@ -33,7 +33,7 @@ const CoreValue = () => {
               transition={{ duration: 0.5 }}
             ></motion.div>
 
-            {/* Core Value Name - Slightly Moves Up on Hover */}
+            {/* Name - Slightly Moves Up on Hover */}
             <motion.div
               className="absolute inset-0 flex items-center justify-center text-3xl font-extrabold"
               initial={{ y: 0 }}
@@ -45,13 +45,28 @@ const CoreValue = () => {
 
             {/* Description - Initially Hidden, Appears on Hover */}
             <motion.div
-              className="absolute bottom-0 w-full p-4 bg-[#11386a] text-white opacity-0 group-hover:opacity-100 group-hover:translate-x-0"
+              className="absolute inset-0  flex flex-col justify-center p-4 bg-[#11386a] text-white opacity-0 group-hover:opacity-100"
               initial={{ y: '100%' }} // Start the description below the card
-              animate={{ y: 0 }} // Animate to the bottom of the card
-              whileHover={{ x: 0 }}
-              transition={{ duration: 0.5 }}
+              whileHover={{ y: 0 }} // Animate to the top of the card when hovered
+              animate={{y:0}}
+              transition={{
+                duration: 0.5,
+                ease: 'easeInOut',
+              }}
             >
-              <p>{value.desc}</p>
+              <div className="flex flex-col items-center justify-center text-center">
+                {/* Name - Bold */}
+                <motion.h3
+                  className="text-2xl font-extrabold mb-4"
+                  initial={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {value.name}
+                </motion.h3>
+              
+                {/* Description */}
+                <p>{value.desc}</p>
+              </div>
             </motion.div>
           </motion.div>
         ))}

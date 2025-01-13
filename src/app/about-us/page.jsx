@@ -9,7 +9,7 @@ import Person3 from "../../../public/icons/person3.png";
 import { motion } from "framer-motion";
 import { FaEye, FaBullseye } from "react-icons/fa";
 import CoreValue from "../components/CoreValue";
-
+import { AnimatePresence } from "framer-motion";
 const Experts = () => {
   const [flipped, setFlipped] = useState({ vision: false, mission: false });
 
@@ -79,7 +79,7 @@ const Experts = () => {
       </div>
 
       {/* Team Section */}
-      <div className="mt-12 flex flex-col items-center gap-8 px-8">
+      <div className="mt-12 flex flex-col items-center gap-8 px-8 mb-12">
         <h2 className="text-3xl font-bold text-[#164574]">Meet Our Experts</h2>
         {teamMembers.map((member, index) => (
           <div
