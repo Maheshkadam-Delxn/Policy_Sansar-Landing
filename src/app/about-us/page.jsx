@@ -65,8 +65,8 @@ const Experts = () => {
             We currently operate with a strength of <b>20+ field officers</b> and <b>Business Development Managers</b> across <b>10 locations</b> in India. Our Registered and Corporate Offices are in <b>Mumbai</b>, and we are in the process of setting up branches in <b>Gujarat, MP, and Kerala</b>.
           </p>
           <p className="text-gray-700 text-justify">
-            Our company website is under development: 
-            <a href="https://www.policysansar.com" className="text-blue-600 font-semibold underline"> www.policysansar.com</a>. We plan to launch our <b className="text-purple-600">app by May 2025</b>.
+            Our company website is under development:{" "}
+            <a href="https://www.policysansar.com" className="text-blue-600 font-semibold underline">www.policysansar.com</a>. We plan to launch our <b className="text-purple-600">app by May 2025</b>.
           </p>
           <div className="mt-4">
             <p className="text-lg font-semibold">📞 Contact Us</p>
@@ -106,16 +106,20 @@ const Experts = () => {
       {/* 'vision and mission section' */}
       <div className="relative w-full h-96  bg-cover bg-center" style={{ backgroundImage: `url(${aboutcover.src})` }}>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      
+      <div className="absolute inset-0 bg-black opacity-70"></div>
+
       
       {/* Content Section */}
+      
       <div className="relative flex flex-col md:flex-row items-center justify-center gap-8 px-8 text-white w-full h-full ">
+      
         {/* Vision Card */}
         <motion.div
           initial={{ rotateY: 180, opacity: 0 }}
           animate={{ rotateY: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="w-full h-2/3 md:w-1/2 bg-blue-900 p-6 rounded-lg shadow-lg flex flex-col items-start justify-center"
+          className="w-full h-2/3 md:w-1/2 bg-slate-800 p-6 rounded-lg shadow-lg flex flex-col items-start justify-center"
         >
           <div className="flex items-center gap-4 mb-4">
             <FaEye className="text-3xl" />
@@ -134,7 +138,7 @@ const Experts = () => {
           initial={{ rotateY: 180, opacity: 0 }}
           animate={{ rotateY: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="w-full h-2/3 md:w-1/2 bg-green-900 p-6 rounded-lg shadow-lg flex flex-col items-start justify-center"
+          className="w-full h-2/3 md:w-1/2 bg-slate-800 p-6 rounded-lg shadow-lg flex flex-col items-start justify-center"
         >
           <div className="flex items-center gap-4 mb-4">
             <FaBullseye className="text-3xl" />
