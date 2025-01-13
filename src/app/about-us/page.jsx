@@ -8,6 +8,7 @@ import Person2 from "../../../public/icons/person2.png";
 import Person3 from "../../../public/icons/person3.png";
 import { motion } from "framer-motion";
 import { FaEye, FaBullseye } from "react-icons/fa";
+import CoreValue from "../components/CoreValue";
 
 const Experts = () => {
   const [flipped, setFlipped] = useState({ vision: false, mission: false });
@@ -103,18 +104,18 @@ const Experts = () => {
       </div>
 
       {/* 'vision and mission section' */}
-      <div className="relative w-full py-16 bg-cover bg-center" style={{ backgroundImage: `url(${aboutcover.src})` }}>
+      <div className="relative w-full h-96  bg-cover bg-center" style={{ backgroundImage: `url(${aboutcover.src})` }}>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
       
       {/* Content Section */}
-      <div className="relative flex flex-col md:flex-row items-center justify-center gap-8 px-8 text-white ">
+      <div className="relative flex flex-col md:flex-row items-center justify-center gap-8 px-8 text-white w-full h-full ">
         {/* Vision Card */}
         <motion.div
           initial={{ rotateY: 180, opacity: 0 }}
           animate={{ rotateY: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="w-full md:w-1/2 bg-blue-900 p-6 rounded-lg shadow-lg"
+          className="w-full h-2/3 md:w-1/2 bg-blue-900 p-6 rounded-lg shadow-lg flex flex-col items-start justify-center"
         >
           <div className="flex items-center gap-4 mb-4">
             <FaEye className="text-3xl" />
@@ -133,7 +134,7 @@ const Experts = () => {
           initial={{ rotateY: 180, opacity: 0 }}
           animate={{ rotateY: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="w-full md:w-1/2 bg-green-900 p-6 rounded-lg shadow-lg"
+          className="w-full h-2/3 md:w-1/2 bg-green-900 p-6 rounded-lg shadow-lg flex flex-col items-start justify-center"
         >
           <div className="flex items-center gap-4 mb-4">
             <FaBullseye className="text-3xl" />
@@ -147,7 +148,9 @@ const Experts = () => {
           </p>
         </motion.div>
       </div>
+      
     </div>
+    <CoreValue/>
     </>
   );
 };
