@@ -37,9 +37,9 @@ const Header = () => {
       // Apply scroll effect only for large screens (md to 2xl)
       if (screenWidth >= 768) {
         if (scrollPosition > 2) {
-          setLogoSize(Math.max(50, 100 - scrollPosition)); // Decrease logo size
+          setLogoSize(Math.max(50, 130 - scrollPosition)); // Decrease logo size smoothly
         } else {
-          setLogoSize(130); // Reset to default size
+          setLogoSize(130); // Reset to default size smoothly
         }
       }
     };
@@ -69,9 +69,9 @@ const Header = () => {
             width={logoSize}
             height={logoSize}
             alt="Logo"
-            className="transition-all ease-in-out duration-300"
+            className="transition-all ease-in-out duration-300 xxs:w-1/3 xs:w-1/3 sm:w-1/3"
           />
-          <h1 className="text-2xl text-[#1D951B]">Policy Sansar</h1>
+          <h1 className="text-2xl text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm">Policy Sansar</h1>
         </Link1>
 
         {/* Hamburger or Back Button */}
@@ -89,37 +89,46 @@ const Header = () => {
         {/* Navigation Links */}
         {/* For larger screens */}
         <div className="hidden lg:flex gap-8">
-          <Link1
-            href={"/"}
-            onClick={closeMenu}
-            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
-          >
+          <Link1 href={"/"} onClick={closeMenu} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
             Home
           </Link1>
-          <Link
-            to="explore"
-            smooth={true}
-            duration={1000}
-            onClick={closeMenu}
-            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
-          >
+          <Link to="explore" smooth={true} duration={1000} onClick={closeMenu} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
             Explore
           </Link>
-          <Link1
-            href="/about-us"
-            onClick={closeMenu}
-            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
-          >
+          <Link1 href="/about-us" onClick={closeMenu} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
             About-us
           </Link1>
-          <Link1
-            href="/contact"
-            onClick={closeMenu}
-            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
-          >
+          <Link1 href="/contact" onClick={closeMenu} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
             Contact-us
           </Link1>
         </div>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              ref={menuRef}
+              className="fixed top-0 right-0 w-2/3 h-full bg-white shadow-lg z-20 flex flex-col items-start px-6 py-4 lg:hidden"
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={menuVariants}
+            >
+              <Link1 href={"/"} onClick={closeMenu} className="py-2 text-lg text-black border-b border-gray-200 w-full text-left">
+                Home
+              </Link1>
+              <Link to="explore" smooth={true} duration={1000} onClick={closeMenu} className="py-2 text-lg text-black border-b border-gray-200 w-full text-left">
+                Explore
+              </Link>
+              <Link1 href="/about-us" onClick={closeMenu} className="py-2 text-lg text-black border-b border-gray-200 w-full text-left">
+                About-us
+              </Link1>
+              <Link1 href="/contact" onClick={closeMenu} className="py-2 text-lg text-black border-b border-gray-200 w-full text-left">
+                Contact-us
+              </Link1>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
