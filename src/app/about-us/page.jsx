@@ -3,8 +3,8 @@ import { React, useState } from "react";
 import Image from "next/image";
 import aboutcover from "../../../public/coverimg/peoplecover.png";
 import sansar from "../../../public/coverimg/sansar.png.jpg";
-import Person1 from "../../../public/experts/Vesukar.png";
-import Person2 from "../../../public/experts/vinod.png";
+import Person2 from "../../../public/experts/Vesukar.png";
+import Person1 from "../../../public/experts/vinod.png";
 import Person3 from "../../../public/experts/ajay.png";
 import { motion } from "framer-motion";
 import { FaEye, FaBullseye } from "react-icons/fa";
@@ -57,11 +57,14 @@ const Experts = () => {
         <div className="w-full md:w-1/2 text-left space-y-4">
           <h2 className="text-3xl font-bold text-[#164574]">About Our Company</h2>
           <p className="text-gray-700 text-justify">
-            Welcome to <b>Policy Sansar Insurance Broking Private Limited</b>, a trusted name in the insurance brokerage industry.
+            Welcome to <b>Policy Sansar Insurance Broking Private Limited</b>, a trusted name in the insurance brokerage industry. Policy Sansar was incorporated on <b>4th Sept 2024</b> under the Registered Company Act 2013. We have received our <b>IRDAI License</b> for Direct Broker - Life and General on <b>27 Dec 2024</b>.
+          </p>
+          <p className="text-gray-700 text-justify">
+            We currently operate with a strength of <b>20+ field officers</b> and <b>Business Development Managers</b> across <b>10 locations</b> in India. Our Registered and Corporate Offices are in <b>Mumbai</b>, and we are in the process of setting up branches in <b>Gujarat, MP, and Kerala</b>.
           </p>
           <p className="text-gray-700 text-justify">
             Our company website is under development:{" "}
-            <a href="https://www.policysansar.com" className="text-blue-600 font-semibold underline">www.policysansar.com</a>. 
+            <a href="https://www.policysansar.com" className=" font-semibold underline">www.policysansar.com</a>. We plan to launch our <b >app by May 2025</b>.
           </p>
           <div className="mt-4">
             <p className="text-lg font-semibold">📞 Contact Us</p>
