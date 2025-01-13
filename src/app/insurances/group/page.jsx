@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import LifeImage from "../../../../public/insurance/lifeee.png";
 import HealthImg from "../../../../public/insurance/health-insurance.jpeg";
-import VehicleImg from "../../../../public/insurance/car-insurance.jpeg";
-import HomeImg from "../../../../public/insurance/home-insurance.jpeg";
-import travelImg from "../../../../public/insurance/travel-insurance.jpeg";
+import PerAccident from "../../../../public/insurance/persnalaccident.png";
+
+import TermImg from "../../../../public/insurance/micro.png";
 
 const GroupInsurance = () => {
   return (
@@ -38,28 +39,28 @@ const GroupInsurance = () => {
       <div className="flex flex-wrap justify-center gap-6">
         {[
           {
-            img: travelImg,
+            img: LifeImage,
             title: "Group Life Insurance",
             desc: "Provides life coverage for a group, typically employees or members.",
             extra:
               "Group Life Insurance offers affordable life coverage for groups. It helps protect employees or group members, providing financial support to their beneficiaries in case of death.",
           },
           {
-            img: travelImg,
+            img: HealthImg,
             title: "Group Health Insurance",
             desc: "Provides medical coverage for employees or group members.",
             extra:
               "Group Health Insurance helps cover medical expenses for a group, including hospitalization, surgeries, and outpatient treatments, ensuring financial security during health emergencies.",
           },
           {
-            img: travelImg,
+            img: PerAccident,
             title: "Group Personal Accident Insurance",
             desc: "Covers accidental injury or death for a group of individuals.",
             extra:
               "Group Personal Accident Insurance provides financial protection to group members in case of accidental injury or death. It helps cover medical costs, disability, and death benefits.",
           },
           {
-            img: travelImg,
+            img: TermImg,
             title: "Group Term Life Insurance",
             desc: "Offers life coverage for a specified term to a group.",
             extra:

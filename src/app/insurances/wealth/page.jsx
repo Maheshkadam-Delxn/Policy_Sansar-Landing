@@ -2,8 +2,12 @@ import Image from "next/image";
 import React from "react";
 import HealthImg from "../../../../public/insurance/health-insurance.jpeg";
 import VehicleImg from "../../../../public/insurance/car-insurance.jpeg";
-import HomeImg from "../../../../public/insurance/home-insurance.jpeg";
-import travelImg from "../../../../public/insurance/travel-insurance.jpeg";
+// import HomeImg from "../../../../public/insurance/home-insurance.jpeg";
+import ulipsImg from "../../../../public/insurance/ulips.png";
+import childImg from "../../../../public/insurance/child.png";
+import PensionImg from "../../../../public/insurance/pention.png";
+
+import EndowermentPlan from "../../../../public/insurance/plans.png";
 
 const WealthInsurance = () => {
   return (
@@ -26,25 +30,25 @@ const WealthInsurance = () => {
       <div className="flex flex-wrap justify-center gap-6">
         {[
   {
-    "img": travelImg,
+    "img": ulipsImg,
     "title": "Unit-Linked Insurance Plans (ULIPs)",
     "desc": "Combines life insurance with investment opportunities to create wealth.",
     "extra": "ULIPs allow you to invest in a mix of funds while offering life insurance protection. They offer potential for wealth accumulation and help you achieve long-term financial goals."
   },
   {
-    "img": travelImg,
+    "img": EndowermentPlan,
     "title": "Endowment Plans",
     "desc": "Provides life coverage along with a savings plan for future goals.",
     "extra": "Endowment plans combine life insurance and savings, paying out a lump sum at the end of the policy term or in case of death, helping you plan for future needs like education, marriage, or retirement."
   },
   {
-    "img": travelImg,
+    "img": PensionImg,
     "title": "Pension Plans",
     "desc": "Helps build a steady income stream post-retirement.",
     "extra": "Pension plans allow you to accumulate savings during your working years and provide a regular income after retirement, ensuring financial independence in your later years."
   },
   {
-    "img": travelImg,
+    "img": childImg,
     "title": "Child Plans",
     "desc": "Secures the future of your children by providing financial coverage.",
     "extra": "Child Plans ensure your child's education and other future needs are covered by offering a combination of life coverage and savings, providing financial security for their future."

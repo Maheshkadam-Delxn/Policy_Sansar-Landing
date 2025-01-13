@@ -2,8 +2,13 @@ import Image from "next/image";
 import React from "react";
 import HealthImg from "../../../../public/insurance/health-insurance.jpeg";
 import VehicleImg from "../../../../public/insurance/car-insurance.jpeg";
-import HomeImg from "../../../../public/insurance/home-insurance.jpeg";
-import travelImg from "../../../../public/insurance/travel-insurance.jpeg";
+// import HomeImg from "../../../../public/insurance/home-insurance.jpeg";
+import MicroImg from "../../../../public/insurance/micro.png";
+import ruralImg from "../../../../public/insurance/h2.png";
+import CropImg from "../../../../public/insurance/crop.png";
+import AccidentImg from "../../../../public/insurance/persnalaccident.png";
+
+// import travelImg from "../../../../public/insurance/travel-insurance.jpeg";
 
 const FinancialInsurance = () => {
   return (
@@ -26,25 +31,25 @@ const FinancialInsurance = () => {
       <div className="flex flex-wrap justify-center gap-6">
         {[
   {
-    "img": travelImg,
+    "img": MicroImg,
     "title": "Micro Insurance",
     "desc": "Affordable insurance aimed at low-income individuals and rural populations.",
     "extra": "Micro Insurance provides basic coverage for individuals in underserved communities. It covers life, health, and accident risks, offering protection for those excluded from traditional insurance."
   },
   {
-    "img": travelImg,
+    "img": ruralImg,
     "title": "Rural Health Insurance",
     "desc": "Provides healthcare coverage for rural populations.",
     "extra": "Rural Health Insurance offers coverage for medical expenses in rural areas, ensuring access to healthcare services and protecting individuals from high medical costs."
   },
   {
-    "img": travelImg,
+    "img": CropImg,
     "title": "Crop Insurance",
     "desc": "Protects farmers against crop loss due to natural disasters or disease.",
     "extra": "Crop Insurance helps farmers safeguard their livelihoods by covering crop loss from natural disasters, pests, or diseases, ensuring financial stability in tough times."
   },
   {
-    "img": travelImg,
+    "img": AccidentImg,
     "title": "Accident Insurance",
     "desc": "Covers accidental injuries or death, providing financial protection.",
     "extra": "Accident Insurance offers financial protection in the event of an accident, covering medical expenses, permanent disability, and even death, helping families recover financially."

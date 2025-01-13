@@ -4,6 +4,11 @@ import Image from 'next/image';
 import GeneralImg from "../../../public/insurance/general.png";
 import HealthImg from "../../../public/insurance/health.png";
 import LifeImg from "../../../public/insurance/life.png";
+
+import GroupImg from "../../../public/insurance/group.png";
+import FinanceImg from "../../../public/insurance/finance.png";
+import WealthImg from "../../../public/insurance/wealth.png";
+
 import GeneralIcon from "../../../public/icons/generalIcon.png";
 import HealthIcon from "../../../public/icons/healthIcon.png";
 import LifeIcon from "../../../public/icons/lifeIcon.png";
@@ -146,7 +151,7 @@ const Insurances = () => {
         >
           <Link href={"../insurances/group"}>
             <Image
-              src={LifeImg}
+              src={GroupImg}
               alt='Life Insurance'
               width={1440}
               height={1080}
@@ -182,7 +187,7 @@ const Insurances = () => {
         >
           <Link href={"../insurances/financial"}>
             <Image
-              src={LifeImg}
+              src={FinanceImg}
               alt='Life Insurance'
               width={1440}
               height={1080}
@@ -219,7 +224,7 @@ const Insurances = () => {
         >
           <Link href={"../insurances/wealth"}>
             <Image
-              src={LifeImg}
+              src={WealthImg}
               alt='Life Insurance'
               width={1440}
               height={1080}
