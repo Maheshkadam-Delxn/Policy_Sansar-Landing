@@ -40,7 +40,7 @@ const Contact = () => {
               <div className="flex  gap-2">
                 <Image width={25} height={25} src={callicon} alt="Phone Icon" />
                 <p className="text-xs sm:text-base ">
-                  <span>+91 </span> <span>9922949596</span>
+                  <span>+91 </span> <span>9644170004</span>
                 </p>
               </div>
             </div>
