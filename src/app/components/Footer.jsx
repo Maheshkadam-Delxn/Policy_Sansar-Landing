@@ -147,7 +147,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-3 text-lg xxs:text-xs">
               <IoMailOpenSharp /> -{" "}
-              <h1 className="text-sm sm:text-base">po.policysansar.com</h1>
+              <h1 className="text-sm sm:text-base">po@policysansar.com</h1>
             </div>
             <div className="flex items-center gap-3 text-lg xxs:text-xs">
               <IoLocationSharp /> -{" "}
