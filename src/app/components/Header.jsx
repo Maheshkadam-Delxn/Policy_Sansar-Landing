@@ -200,6 +200,7 @@ const Header = () => {
               variants={menuVariants}
             >
               <Link1
+              onClick={()=>setIsMenuOpen(!isMenuOpen)}
                 href="/"
                 className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
               >
@@ -265,18 +266,21 @@ const Header = () => {
                 )}
               </div>
               <Link1
+              onClick={()=>setIsMenuOpen(!isMenuOpen)}
                 href="/Distribution"
                 className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
               >
                 Process
               </Link1>
               <Link1
+              onClick={()=>setIsMenuOpen(!isMenuOpen)}
                 href="/about-us"
                 className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
               >
                 About Us
               </Link1>
               <Link1
+              onClick={()=>setIsMenuOpen(!isMenuOpen)}
                 href="/contact"
                 className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
               >
