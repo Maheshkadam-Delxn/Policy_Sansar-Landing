@@ -95,11 +95,14 @@ const Header = () => {
           <Link to="explore" smooth={true} duration={1000} onClick={closeMenu} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
             Products
           </Link>
+          <Link1  href={"/Distribution"} onClick={closeMenu} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
+            Process
+          </Link1>
           <Link1 href="/about-us" onClick={closeMenu} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
-            About-us
+            About Us
           </Link1>
           <Link1 href="/contact" onClick={closeMenu} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
-            Contact-us
+            Contact Us
           </Link1>
         </div>
 

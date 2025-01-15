@@ -5,6 +5,8 @@ import { IoCallSharp, IoMailOpenSharp, IoLocationSharp } from "react-icons/io5";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { useInView } from "react-intersection-observer"; // Importing useInView
 import Link1 from "next/link";
+import Image from "next/image";
+import FooterLogo from "../../../public/icons/footerLogo.png"
 const Footer = () => {
   const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
   const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true });
@@ -18,9 +20,9 @@ const Footer = () => {
   return (
     <div className="w-full h-auto bg-[#121212] text-white p-8 overflow-hidden">
       {/* logo social with navigations */}
-      <div className="flex flex-col lg:flex-row items-start justify-between w-full space-y-8 lg:space-y-0 lg:space-x-10">
+      <div className="flex flex-col lg:flex-row items-start justify-between w-full space-y-8 lg:space-y-0 lg:space-x-10 ">
         {/* text logos */}
-        <div ref={ref1} className="flex flex-col items-start gap-3 w-full lg:w-1/3">
+        <div ref={ref1} className="flex flex-col items-center justify-between gap-10 ">
           <h1
             className={`text-3xl font-extrabold transition-all duration-700 xxs:text-xl xs:text-xl sm:text-xl ${
               inView1 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
@@ -28,6 +30,15 @@ const Footer = () => {
           >
             PolicySansar
           </h1>
+          <div>
+            <Image
+              src={FooterLogo}
+              alt="Logo"
+              width={200}
+              height={200}
+              className="rounded-full"
+            />
+          </div>
           <div className="flex items-center gap-3">
             <div className="p-3 rounded-full  border border-x-2 border-y-2 border-white hover:border-[#1D951B] hover:bg-[#1D951B] hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
               <FaXTwitter />
@@ -42,6 +53,7 @@ const Footer = () => {
               <FaInstagram />
             </div>
           </div>
+         
         </div>
 
             {/* PRODUCT LINKS */}
