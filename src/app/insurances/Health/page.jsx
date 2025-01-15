@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import h1 from "../../../../public/insurance/h1.png";
-import HealthImg from "../../../../public/insurance/health.png";
+// import HealthImg from "../../../../public/insurance/health.png";
+import HealthImg from "../../../../public/icons/CHealth.jpg"
 
 
 
@@ -48,7 +49,7 @@ const HealthInsurance = () => {
           Our plans are designed to suit individuals, families, and senior citizens, providing customized coverage as per your needs. Enjoy cashless treatments and extensive medical benefits with Policy Sansar.
         </p>
         </div>
-        <div className="relative w-full h-48 rounded overflow-hidden group shadow-lg mt-6">
+        <div className="relative w-full h-64 rounded overflow-hidden group shadow-lg mt-6 ">
           <Image src={HealthImg} alt="Health Insurance Benefits" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75" />
           <div className="absolute inset-0 bg-blue-600 bg-opacity-60 flex items-center justify-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
             <p className="text-white font-semibold px-4">Stay worry-free with our extensive health insurance benefits. Secure your health today.</p>
