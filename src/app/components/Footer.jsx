@@ -22,15 +22,8 @@ const Footer = () => {
       {/* logo social with navigations */}
       <div className="flex flex-col lg:flex-row items-start justify-between w-full space-y-8 lg:space-y-0 lg:space-x-10 ">
         {/* text logos */}
-        <div ref={ref1} className="flex flex-col items-center justify-between gap-10 ">
-          <h1
-            className={`text-3xl font-extrabold transition-all duration-700 xxs:text-xl xs:text-xl sm:text-xl ${
-              inView1 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-            }`}
-          >
-            PolicySansar
-          </h1>
-          <div>
+        <div ref={ref1} className="flex flex-col items-center justify-between gap-5 ">
+        <div>
             <Image
               src={FooterLogo}
               alt="Logo"
@@ -39,6 +32,15 @@ const Footer = () => {
               className="rounded-full"
             />
           </div>
+         <div className="flex flex-col items-center gap-2">
+         <h1
+            className={`text-4xl font-extrabold transition-all duration-700 xxs:text-xl xs:text-xl sm:text-xl ${
+              inView1 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+            }`}
+          >
+            Policy Sansar
+          </h1>
+         
           <div className="flex items-center gap-3">
             <div className="p-3 rounded-full  border border-x-2 border-y-2 border-white hover:border-[#1D951B] hover:bg-[#1D951B] hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
               <FaXTwitter />
@@ -53,6 +55,7 @@ const Footer = () => {
               <FaInstagram />
             </div>
           </div>
+         </div>
          
         </div>
 
@@ -87,19 +90,25 @@ const Footer = () => {
               duration={1000}
               className="cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
             >
-              Explore
+              Products
             </Link>
+            <Link1
+              href={"/Distribution"}
+              className="cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
+            >
+              Process
+            </Link1>
             <Link1
               href={"/about-us"}
               className="cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
             >
-              About-us
+              About Us
             </Link1>
             <Link1
               href={"/contact"}
               className="cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
             >
-              Contact-us
+              Contact Us
             </Link1>
           </div>
 
@@ -117,11 +126,11 @@ const Footer = () => {
               Contact
             </h1>
             <div className="flex items-center gap-3 text-lg xxs:text-xs">
-              <IoCallSharp /> - <h1 className="text-sm sm:text-base">+91 8668903099</h1>
+              <IoCallSharp /> - <h1 className="text-sm sm:text-base">+91 9644170004</h1>
             </div>
             <div className="flex items-center gap-3 text-lg xxs:text-xs">
               <IoMailOpenSharp /> -{" "}
-              <h1 className="text-sm sm:text-base">policysansar@gmail.com</h1>
+              <h1 className="text-sm sm:text-base">po.policysansar.com</h1>
             </div>
             <div className="flex items-center gap-3 text-lg xxs:text-xs">
               <IoLocationSharp /> -{" "}

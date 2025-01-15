@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router"; // Import useRouter
 import Logo from "../../../public/insurance/logo.png";
 import Link1 from "next/link";
 import Image from "next/image";
@@ -12,6 +13,13 @@ const Header = () => {
   const [logoSize, setLogoSize] = useState(120); // Initial logo size in px
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Menu open state
   const menuRef = useRef(null); // Ref for menu
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentPath(window.location.pathname); // Set current path on the client
+    }
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -89,19 +97,51 @@ const Header = () => {
         {/* Navigation Links */}
         {/* For larger screens */}
         <div className="hidden lg:flex gap-8">
-          <Link1 href={"/"} onClick={closeMenu} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
+          <Link1
+            href={"/"}
+            onClick={closeMenu}
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+          >
             Home
           </Link1>
-          <Link to="explore" smooth={true} duration={1000} onClick={closeMenu} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
-            Products
-          </Link>
-          <Link1  href={"/Distribution"} onClick={closeMenu} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
+          {currentPath === "/" ? (
+            <Link
+              to="explore"
+              smooth={true}
+              duration={1000}
+              onClick={closeMenu}
+              className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+            >
+              Products
+            </Link>
+          ) : (
+            <Link1
+              href="/"
+              onClick={closeMenu}
+              className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+            >
+              Products
+            </Link1>
+          )}
+          <Link1
+            href="/Distribution"
+            onClick={closeMenu}
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+          >
             Process
           </Link1>
-          <Link1 href="/about-us" onClick={closeMenu} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
+          <Link1
+            href="/about-us"
+            onClick={closeMenu}
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+          >
             About Us
           </Link1>
-          <Link1 href="/contact" onClick={closeMenu} className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
+          <Link1
+            href="/contact"
+            onClick={closeMenu}
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+          >
             Contact Us
           </Link1>
         </div>
@@ -117,17 +157,54 @@ const Header = () => {
               exit="exit"
               variants={menuVariants}
             >
-              <Link1 href={"/"} onClick={closeMenu} className="py-2 text-lg text-black border-b border-gray-200 w-full text-left">
+              <Link1
+                href={"/"}
+                onClick={closeMenu}
+                className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
+              >
                 Home
               </Link1>
-              <Link to="explore" smooth={true} duration={1000} onClick={closeMenu} className="py-2 text-lg text-black border-b border-gray-200 w-full text-left">
-                Explore
-              </Link>
-              <Link1 href="/about-us" onClick={closeMenu} className="py-2 text-lg text-black border-b border-gray-200 w-full text-left">
-                About-us
+              {currentPath === "/" ? (
+            <Link
+              to="explore"
+              smooth={true}
+              duration={1000}
+              onClick={closeMenu}
+              className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
+            >
+              Products
+            </Link>
+          ) : (
+            <Link1
+              href="/"
+              onClick={closeMenu}
+              className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
+            >
+              Products
+            </Link1>
+          )}
+           <Link1
+              
+              href="/Distribution"
+              onClick={closeMenu}
+              className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
+            >
+              Process
+            </Link1>
+              <Link1
+              
+                href="/about-us"
+                onClick={closeMenu}
+                className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
+              >
+                About Us
               </Link1>
-              <Link1 href="/contact" onClick={closeMenu} className="py-2 text-lg text-black border-b border-gray-200 w-full text-left">
-                Contact-us
+              <Link1
+                href="/contact"
+                onClick={closeMenu}
+                className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
+              >
+                Contact Us
               </Link1>
             </motion.div>
           )}
