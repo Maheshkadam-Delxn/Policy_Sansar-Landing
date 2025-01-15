@@ -97,12 +97,12 @@ const Footer = () => {
             }`}
           >
             
-            <Link
-              onClick={scrollToTop}
+            <Link1
+              href={"/"}
               className="cursor-pointer  transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
             >
               Home
-            </Link>
+            </Link1>
            
             <Link1
               href={"/Distribution"}
