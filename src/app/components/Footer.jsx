@@ -84,14 +84,7 @@ const Footer = () => {
             >
               Home
             </Link>
-            <Link
-              to="explore"
-              smooth={true}
-              duration={1000}
-              className="cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
-            >
-              Products
-            </Link>
+           
             <Link1
               href={"/Distribution"}
               className="cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
