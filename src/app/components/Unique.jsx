@@ -56,7 +56,7 @@ const Unique = () => {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: card1InView ? 1 : 0, x: card1InView ? 0 : -100 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="w-full lg:w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer p-3"
+              className="w-full lg:w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white  p-3"
             >
               <div className="flex items-start gap-6 p-3 xxs:p-2 xs:p-2 sm:p-2 xxs:gap-2 xs:gap-2 sm:gap-2 w-full">
                 <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold xxs:w-6 xs:w-6 sm:w-6 xxs:h-6 xs:h-6 sm:h-6 xxs:p-4 xs:p-4 sm:p-4">1</div>
@@ -75,7 +75,7 @@ const Unique = () => {
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: card2InView ? 1 : 0, x: card2InView ? 0 : 100 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="w-full lg:w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer xs:justify-start xxs:justify-start sm:justify-start p-3"
+                className="w-full lg:w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white  xs:justify-start xxs:justify-start sm:justify-start p-3"
               >
                 <div className="flex items-start gap-6 p-3 xxs:p-2 xs:p-2 sm:p-2 xxs:gap-2 xs:gap-2 sm:gap-2">
                   <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold xxs:w-6 xs:w-6 sm:w-6 xxs:h-6 xs:h-6 sm:h-6 xxs:p-4 xs:p-4 sm:p-4">2</div>
@@ -93,7 +93,7 @@ const Unique = () => {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: card3InView ? 1 : 0, x: card3InView ? 0 : -100 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="w-full lg:w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer xxs:justify-start xs:justify-start sm:justify-start p-3"
+              className="w-full lg:w-96 h-32 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white  xxs:justify-start xs:justify-start sm:justify-start p-3"
             >
               <div className="flex items-start gap-6 p-3 xxs:p-2 xs:p-2 sm:p-2 xxs:gap-2 xs:gap-2 sm:gap-2 ">
                 <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold xxs:w-6 xs:w-6 sm:w-6 xxs:h-6 xs:h-6 sm:h-6 xxs:p-4 xs:p-4 sm:p-4">3</div>

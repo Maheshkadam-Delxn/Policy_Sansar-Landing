@@ -33,7 +33,7 @@ const Why_Choose = () => {
           >
             {/* Top Center Card */}
             <motion.div
-              className="w-full xxs:w-96 sm:w-96 md:w-96 lg:w-96 bg-white shadow-lg rounded-2xl p-5 text-center xxs:text-start relative text-gray-800 hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
+              className="w-full xxs:w-96 sm:w-96 md:w-96 lg:w-96 bg-white shadow-lg rounded-2xl p-5 text-center xxs:text-start relative text-gray-800 hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white"
               variants={cardVariants}
             >
               <h1 className="text-xl font-bold xxs:text-sm">
@@ -47,7 +47,7 @@ const Why_Choose = () => {
             {/* Two cards on left and right */}
             <div className="w-full flex flex-wrap justify-center gap-6 mt-6">
               <motion.div
-                className="w-full xxs:w-96 xs:w-96 sm:w-96 md:w-96 lg:w-80 bg-white shadow-lg rounded-2xl p-5 relative text-gray-800 hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
+                className="w-full xxs:w-96 xs:w-96 sm:w-96 md:w-96 lg:w-80 bg-white shadow-lg rounded-2xl p-5 relative text-gray-800 hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white "
                 variants={cardVariants}
               >
                 <h1 className="text-xl font-bold xxs:text-sm">
@@ -59,7 +59,7 @@ const Why_Choose = () => {
               </motion.div>
 
               <motion.div
-                className="w-full xxs:w-96 xs:w-96 sm:w-96 md:w-96 lg:w-80 bg-white shadow-lg rounded-2xl p-5 relative text-gray-800 hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
+                className="w-full xxs:w-96 xs:w-96 sm:w-96 md:w-96 lg:w-80 bg-white shadow-lg rounded-2xl p-5 relative text-gray-800 hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white "
                 variants={cardVariants}
               >
                 <h1 className="text-xl font-bold xxs:text-sm ">
@@ -74,7 +74,7 @@ const Why_Choose = () => {
             {/* Two Bottom Cards */}
             <div className="w-full flex flex-wrap justify-center gap-6 mt-6 ">
               <motion.div
-                className="w-full xxs:w-96  xs:w-96 sm:w-96 md:w-96 lg:w-80 bg-white shadow-lg rounded-2xl p-5 relative text-gray-800 hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
+                className="w-full xxs:w-96  xs:w-96 sm:w-96 md:w-96 lg:w-80 bg-white shadow-lg rounded-2xl p-5 relative text-gray-800 hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white "
                 variants={cardVariants}
               >
                 <h1 className="text-xl font-bold xxs:text-sm">
@@ -86,7 +86,7 @@ const Why_Choose = () => {
               </motion.div>
 
               <motion.div
-                className="w-full xxs:w-96 xs:w-96 sm:w-96  md:w-96 lg:w-80 bg-white shadow-lg rounded-2xl p-5  relative text-gray-800 hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white cursor-pointer"
+                className="w-full xxs:w-96 xs:w-96 sm:w-96  md:w-96 lg:w-80 bg-white shadow-lg rounded-2xl p-5  relative text-gray-800 hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white "
                 variants={cardVariants}
               >
                 <h1 className="text-xl font-bold xxs:text-sm">
