@@ -85,7 +85,7 @@ const Experts = () => {
       </div>
 
       {/* Team Section */}
-      <div className=" flex flex-col items-center gap-8 px-8 ">
+      <div className=" flex flex-col items-center gap-8 px-8  ">
         <h2 className="text-3xl font-bold text-[#164574]">Meet Our Experts</h2>
         {/* <h2 className="text-[#164574]  font-bold text-3xl">
         <AnimatedHeader text="Meet Our Experts"  className="!text-3xl  "/>
@@ -94,7 +94,7 @@ const Experts = () => {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className={`relative w-full md:w-3/4 flex flex-col-reverse lg:flex-col-reverse xl:flex-row 2xl:flex-row md:flex-col-reverse items-center gap-6 p-6 ${
+            className={`relative w-full  md:w-5/6 flex flex-col-reverse lg:flex-col-reverse xl:flex-row 2xl:flex-row md:flex-col-reverse items-center gap-6 p-6 ${
               index % 2 === 0 ? "md:flex-row-reverse lg:flex-row-reverse xl:flex-row-reverse 2xl:flex-row-reverse " : ""
             }`}
           >
