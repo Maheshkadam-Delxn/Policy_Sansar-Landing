@@ -44,6 +44,19 @@ const Footer = () => {
           </div>
         </div>
 
+            {/* PRODUCT LINKS */}
+
+            <div className="flex flex-col items-start gap-5">
+              <h1 className="text-xl font-bold">Products</h1>
+              <ul className="text-md flex flex-col gap-3">
+                <li><Link1 href={"/insurances/General"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">General Inusrance</Link1></li>
+                <li><Link1 href={"/insurances/Health"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">Health Insurance</Link1></li>
+                <li><Link1 href={"/insurances/Life"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">Life Insurance</Link1></li>
+                <li><Link1 href={"/insurances/group"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">Group Insurance</Link1></li>
+                <li><Link1 href={"/insurances/financial"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">Financial Insurance</Link1></li>
+                <li><Link1 href={"/insurances/wealth"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">Wealth Insurance</Link1></li>
+              </ul>
+            </div>
         <div ref={ref2} className="flex flex-col items-end gap-10 w-full lg:w-1/3">
           <div
             className={`flex flex-col items-end gap-3 text-xl font-md transition-all duration-700 ${

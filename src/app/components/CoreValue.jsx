@@ -39,6 +39,13 @@ const CoreValue = () => {
           <motion.div
             key={index}
             className="relative w-96 h-80 text-black rounded-lg overflow-hidden group bg-white shadow-lg"
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ 
+              duration: 0.8, 
+              ease: 'easeOut', 
+              delay: index * 0.2 // Delay each card by 0.2s multiplied by its index
+            }}
             whileHover={{ scale: 1.05 }}
           >
             {/* Background Image */}

@@ -22,17 +22,17 @@ const Contact = () => {
         <AnimatedHeader text="Contact Us" />
 
         {/* Parent Container */}
-        <div className="flex lg:flex-col md:flex-col xl:flex-row 2xl:flex-row sm:flex-row  w-full justify-between gap-6 sm:gap-12">
+        <div className="flex lg:flex-col xxs:flex-col xs:flex-col  md:flex-col xl:flex-row 2xl:flex-row sm:flex-col  w-full justify-between gap-6 sm:gap-12">
           
           {/* Map Section */}
-          <div className="w-full lg:w-full md:w-full sm:w-1/2 xl:w-1/2 2xl:w-1/2 h-auto bg-blue-300 rounded-2xl p-6 sm:p-10 flex flex-col items-start justify-between">
+          <div className="w-full lg:w-full md:w-full sm:w-full xl:w-1/2 2xl:w-1/2 h-auto bg-blue-300 rounded-2xl p-6 sm:p-10 flex flex-col items-start justify-between">
             <div className="text-white">
               <p className="text-xl sm:text-3xl font-bold">Contact Us</p>
               <p className="text-sm sm:text-base pt-2 sm:pt-4">Let's Build a Conversation - Contact Us Today.</p>
             </div>
 
             {/* Email & Mobile Number */}
-            <div className="md:flex lg:flex-row md:items-center md:justify-between md:w-full gap-3 md:gap-6 p-2 xxs:flex-col">
+            <div className="flex lg:flex-row md:items-center xl:flex md:justify-between md:w-full gap-3 md:gap-6 p-2 xxs:flex-col">
               <div className=" flex gap-2">
                 <Image width={25} height={25} src={mailicon} alt="Email Icon" />
                 <p className="text-xs sm:text-base">po.policysansar.com</p>
@@ -60,7 +60,7 @@ const Contact = () => {
           </div>
 
           {/* Google Form Embed Section */}
-          <div className="bg-white w-full lg:w-full md:w-full xl:w-1/2 2xl:w-1/2 sm:w-1/2 h-auto p-6 sm:p-8 flex flex-col items-start justify-center gap-6 sm:gap-12 rounded-2xl border border-gray-400">
+          <div className="bg-white w-full lg:w-full md:w-full xl:w-1/2 2xl:w-1/2 sm:w-full h-auto p-6 sm:p-8 flex flex-col items-start justify-center gap-6 sm:gap-12 rounded-2xl border border-gray-400">
             <p className="text-xl sm:text-2xl font-bold">Get in Touch</p>
             <iframe 
   src="https://docs.google.com/forms/d/e/1FAIpQLSfA_lb0gzs4Pk2k_8gN0atWHIXCb6820M_AUCw5T6G_y7QM4A/viewform?embedded=true"
