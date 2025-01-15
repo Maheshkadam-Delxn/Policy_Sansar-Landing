@@ -22,7 +22,7 @@ const Footer = () => {
       {/* logo social with navigations */}
       <div className="flex flex-col lg:flex-row items-start justify-between w-full space-y-8 lg:space-y-0 lg:space-x-10 ">
         {/* text logos */}
-        <div ref={ref1} className="flex flex-col items-center justify-between gap-5 ">
+        <div ref={ref1} className="flex flex-col items-center justify-between gap-5 xs:w-full xs:items-center xxs:w-full xxs:items-center">
         <div>
             <Image
               src={FooterLogo}
@@ -61,7 +61,8 @@ const Footer = () => {
 
             {/* PRODUCT LINKS */}
 
-            <div className="flex flex-col items-start gap-5">
+          <div className="flex items-start xs:justify-between xs:w-full xxs:w-full gap-8 xxs:justify-between ">
+          <div className="flex flex-col items-start gap-5">
               <h1 className="text-xl font-bold">Products</h1>
               <ul className="text-md flex flex-col gap-3">
                 <li><Link1 href={"/insurances/General"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">General Inusrance</Link1></li>
@@ -72,42 +73,65 @@ const Footer = () => {
                 <li><Link1 href={"/insurances/wealth"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">Wealth Insurance</Link1></li>
               </ul>
             </div>
-        <div ref={ref2} className="flex flex-col items-end gap-10 w-full lg:w-1/3">
-          <div
-            className={`flex flex-col items-end gap-3 text-xl font-md transition-all duration-700 ${
+            {/* <div className="flex flex-col items-start gap-5">
+              <h1>Quick Links</h1>
+              <ul className="flex flex-col items-start gap-3">
+                <li>Terms & Conditions</li>
+                <li>Privacy Policy</li>
+                <li>Securityy</li>
+              </ul>
+            </div>
+            <div className="flex flex-col items-start gap-5">
+              <h1>Quick Links</h1>
+              <ul className="flex flex-col items-start gap-3">
+                <li>Terms & Conditions</li>
+                <li>Privacy Policy</li>
+                <li>Securityy</li>
+              </ul>
+            </div> */}
+            <div className="flex flex-col items-start gap-5 xs:w-1/2 xs:items-end">
+            <h1 className="text-xl font-bold xs:items-end">Quick Links</h1>
+            <div
+            className={`flex flex-col items-start gap-3 text-md font-md transition-all duration-700 xs:items-end  xs:w-full xxs:w-full xss:item-end ${
               inView2 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >
+            
             <Link
               onClick={scrollToTop}
-              className="cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
+              className="cursor-pointer  transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
             >
               Home
             </Link>
            
             <Link1
               href={"/Distribution"}
-              className="cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
+              className="cursor-pointer  transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
             >
               Process
             </Link1>
             <Link1
               href={"/about-us"}
-              className="cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
+              className="cursor-pointer  transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
             >
               About Us
             </Link1>
             <Link1
               href={"/contact"}
-              className="cursor-pointer hover:-translate-x-3 transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
+              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
             >
               Contact Us
             </Link1>
           </div>
+            </div>
+          
+          </div>
+        <div ref={ref2} className="flex flex-col items-end gap-10 w-full">
+          
 
           <div
             ref={ref3}
-            className={`w-full lg:w-96 xl:w-96 2xl:w-96 md:w-96 flex flex-col items-start gap-4 p-5 bg-[#474747] rounded-2xl transition-all duration-700 ${
+            className={`w-full xs:w-full lg:w-96 xl:w-96 2xl:w-96 md:w-96 flex flex-col items-start gap-4 p-5 bg-[#474747] rounded-2xl transition-all duration-700 ${
               inView3 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >
