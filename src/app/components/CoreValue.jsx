@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import AnimatedHeader from './AnimatedHeader';
 import Integrity from "../../../public/core/result.png";
 import Inclusivity from "../../../public/core/inclusivity.png";
@@ -23,10 +24,17 @@ const coreValues = [
 ];
 
 const CoreValue = () => {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
   return (
-    <div className="flex flex-col items-center gap-10 mt-12 p-6 w-full overflow-hidden">
-      <AnimatedHeader text={"Our Core Values"} />
-      <div className="flex flex-wrap items-center gap-4 justify-center">
+    <div ref={ref} className="flex flex-col items-center gap-10 mt-12 p-6 w-full overflow-hidden">
+      <AnimatedHeader text="Our Core Values" />
+      <motion.div
+        className="flex flex-wrap items-center gap-4 justify-center"
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
         {coreValues.map((value, index) => (
           <motion.div
             key={index}
@@ -53,8 +61,7 @@ const CoreValue = () => {
             </motion.div>
 
             {/* Description - Appears on Hover */}
-           {/* Description - Appears on Hover with Blur Effect */}
-           <motion.div
+            <motion.div
               className="absolute inset-0 flex flex-col justify-center p-4 backdrop-blur-md bg-white/0 text-white opacity-0 group-hover:opacity-100"
               initial={{ y: '100%' }}
               whileHover={{ y: 0 }}
@@ -70,7 +77,7 @@ const CoreValue = () => {
             </motion.div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

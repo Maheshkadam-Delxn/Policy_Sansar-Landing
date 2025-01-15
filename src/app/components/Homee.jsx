@@ -14,12 +14,12 @@ const Homee = () => {
 
       {/* HERO SECTION HEADLINE */}
       <motion.div 
-        className="w-full flex flex-col items-center justify-center text-center gap-3 pt-8"
+        className="w-full flex flex-col items-center justify-center text-center gap-3 pt-8 "
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <motion.h1 className="font-bold text-6xl text-blue-700 xs:text-2xl xxs:text-2xl sm:text-2xl lg:text-6xl md:text-6xl">
+        <motion.h1 className="font-bold text-6xl text-blue-700 xs:text-2xl xxs:text-2xl sm:text-2xl lg:text-6xl md:text-6xl ">
           The Insurance Partner
         </motion.h1>
         <div className='flex items-center gap-2'>
