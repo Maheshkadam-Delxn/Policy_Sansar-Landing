@@ -64,7 +64,7 @@ const Footer = () => {
           <div className="flex items-start xs:justify-between xs:w-full xxs:w-full gap-8 xxs:justify-between ">
           <div className="flex flex-col items-start gap-5">
               <h1 className="text-xl font-bold">Products</h1>
-              <ul className="text-md flex flex-col gap-3">
+              <ul className="text-md flex flex-col gap-3 xxs:text-sm">
                 <li><Link1 href={"/insurances/General"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">General Inusrance</Link1></li>
                 <li><Link1 href={"/insurances/Health"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">Health Insurance</Link1></li>
                 <li><Link1 href={"/insurances/Life"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">Life Insurance</Link1></li>
@@ -89,10 +89,10 @@ const Footer = () => {
                 <li>Securityy</li>
               </ul>
             </div> */}
-            <div className="flex flex-col items-start gap-5 xs:w-1/2 xs:items-end">
+            <div className="flex flex-col items-start gap-5 xs:w-1/2 xs:items-end sm:w-1/2 xxs:items-end xxs:w-1/2">
             <h1 className="text-xl font-bold xs:items-end">Quick Links</h1>
             <div
-            className={`flex flex-col items-start gap-3 text-md font-md transition-all duration-700 xs:items-end  xs:w-full xxs:w-full xss:item-end ${
+            className={`flex flex-col items-start gap-3 text-md font-md transition-all duration-700 xs:items-end  xs:w-full xxs:w-full xss:item-end xxs:items-end ${
               inView2 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >
