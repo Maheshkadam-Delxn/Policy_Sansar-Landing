@@ -42,7 +42,7 @@ const LifeInsurance = () => {
           <p className="text-gray-700 mb-4 text-justify">
             Our plans are designed to be flexible, allowing you to customize your coverage according to your specific requirements. Whether you're looking for short-term security or long-term investment benefits, Policy Sansar has the right plan for you.
           </p>
-          <div className="relative w-full h-64 rounded overflow-hidden group shadow-lg mt-6">
+          <div className="relative w-full h-96 rounded overflow-hidden group shadow-lg mt-6">
             <Image src={LifeImg} alt="Life Insurance Benefits" layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75" />
             <div className="absolute inset-0 bg-blue-600 bg-opacity-60 flex items-center justify-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
               <p className="text-white font-semibold px-4 text-justify">Plan for the future today. Secure your legacy with our trusted life insurance solutions.</p>
