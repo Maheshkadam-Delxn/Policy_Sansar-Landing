@@ -94,8 +94,8 @@ const Experts = () => {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className={`relative w-full md:w-3/4 flex flex-col-reverse md:flex-row items-center gap-6 p-6 ${
-              index % 2 === 0 ? "md:flex-row-reverse " : ""
+            className={`relative w-full md:w-3/4 flex flex-col-reverse lg:flex-col-reverse xl:flex-row 2xl:flex-row md:flex-col-reverse items-center gap-6 p-6 ${
+              index % 2 === 0 ? "md:flex-row-reverse lg:flex-row-reverse xl:flex-row-reverse 2xl:flex-row-reverse " : ""
             }`}
           >
             <div className="flex-1">
