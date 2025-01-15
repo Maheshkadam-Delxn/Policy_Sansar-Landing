@@ -32,7 +32,7 @@ const Contact = () => {
             </div>
 
             {/* Email & Mobile Number */}
-            <div className="md:flex lg:flex-row md:items-center md:justify-between md:w-full gap-3 md:gap-6 p-2 xxs:flex-col">
+            <div className="flex lg:flex-row md:items-center xl:flex md:justify-between md:w-full gap-3 md:gap-6 p-2 xxs:flex-col">
               <div className=" flex gap-2">
                 <Image width={25} height={25} src={mailicon} alt="Email Icon" />
                 <p className="text-xs sm:text-base">po.policysansar.com</p>

@@ -7,7 +7,7 @@ import travelImg from "../../../../public/insurance/travel-insurance.jpeg";
 
 const GeneralInsurance = () => {
   return (
-    <div className="container mx-auto p-6 xxs:p-2">
+    <div className="container mx-auto p-6 xxs:p-2 mt-12 mb-12">
       <div className="flex items-center justify-center">
         <div className="w-3/4 md:w-3/4 xxs:w-full">
           <h1 className="text-3xl font-bold text-center text-blue-700 mb-6">
