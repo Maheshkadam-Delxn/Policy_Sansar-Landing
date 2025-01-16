@@ -3,7 +3,7 @@ import { React, useState } from "react";
 import Image from "next/image";
 import aboutcover from "../../../public/coverimg/peoplecover.png";
 import sansar from "../../../public/coverimg/sansar.png.jpg";
-import Person2 from "../../../public/experts/Vesukar.png";
+import Person2 from "../../../public/experts/Vesukarr.png";
 import Person1 from "../../../public/experts/vinod.png";
 import Person3 from "../../../public/experts/ajay.png";
 import { motion } from "framer-motion";
