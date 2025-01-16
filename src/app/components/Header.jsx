@@ -126,42 +126,42 @@ const Header = () => {
                 <Link1
                   onClick={()=>setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/General"
-                  className="block px-4 py-2 hover:bg-gray-100 text-black"
+                  className="block px-4 py-2  text-black relative after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
                 >
                   General Insurance
                 </Link1>
                 <Link1
                 onClick={()=>setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/Health"
-                  className="block px-4 py-2 hover:bg-gray-100 text-black"
+                  className="block px-4 py-2  text-black relative after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
                 >
                   Health Insurance
                 </Link1>
                 <Link1
                 onClick={()=>setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/Life"
-                  className="block px-4 py-2 hover:bg-gray-100 text-black"
+                  className="block px-4 py-2  text-black relative after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
                 >
                   Life Insurance
                 </Link1>
                 <Link1
                 onClick={()=>setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/group"
-                  className="block px-4 py-2 hover:bg-gray-100 text-black"
+                  className="block px-4 py-2  text-black relative after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
                 >
                   Group Insurance
                 </Link1>
                 <Link1
                 onClick={()=>setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/financial"
-                  className="block px-4 py-2 hover:bg-gray-100 text-black"
+                  className="block px-4 py-2  text-black relative after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
                 >
                   Financial Insurance
                 </Link1>
                 <Link1
                 onClick={()=>setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/wealth"
-                  className="block px-4 py-2 hover:bg-gray-100 text-black"
+                  className="block px-4 py-2  text-black relative after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
                 >
                   Wealth Insurance
                 </Link1>
