@@ -131,7 +131,7 @@ const Footer = () => {
 
           <div
             ref={ref3}
-            className={`w-full xs:w-full lg:w-96 xl:w-96 2xl:w-96 md:w-96 flex flex-col items-start gap-4 p-5 bg-[#474747] rounded-2xl transition-all duration-700 ${
+            className={`w-full xs:w-full lg:w-96 xl:w-96 2xl:w-full md:w-96 flex flex-col items-start gap-4 p-5 bg-[#474747] rounded-2xl transition-all duration-700 ${
               inView3 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >
@@ -142,17 +142,24 @@ const Footer = () => {
             >
               Contact
             </h1>
-            <div className="flex items-center gap-3 text-lg xxs:text-xs">
-              <IoCallSharp /> - <h1 className="text-sm sm:text-base">+91 9644170004</h1>
+            <div className="flex items-center gap-3 text-lg xxs:text-xs  w-full">
+              <IoCallSharp className="text-lg"/> - <h1 className="text-sm sm:text-base">+91 9644170004</h1>
             </div>
-            <div className="flex items-center gap-3 text-lg xxs:text-xs">
-              <IoMailOpenSharp /> -{" "}
+            <div className="flex items-center gap-3 text-lg xxs:text-xs  w-full">
+              <IoMailOpenSharp className="text-lg"/> -{" "}
               <h1 className="text-sm sm:text-base">po@policysansar.com</h1>
             </div>
-            <div className="flex items-center gap-3 text-lg xxs:text-xs">
-              <IoLocationSharp /> -{" "}
-              <h1 className="text-sm sm:text-base">Thane, Mumbai, Maharashtra, India</h1>
-            </div>
+            <div className="flex items-center gap-3 w-full">
+             <IoLocationSharp className="text-4xl"/> -{" "}
+             <h1 className="text-sm sm:text-base">3rd Floor,Plot No.264/265,Vaswani Chamber,Dr.Annie Besant Road,Worli Colony,Mumbai-400018</h1>
+             </div>
+            
+             
+             <div className="flex items-center gap-3 w-full">
+             <IoLocationSharp className="text-3xl"/> -{" "}
+             <h1 className="text-sm sm:text-base">104,1st Floor,A-Wing,Boomerang,Chandivali Farm Road,Andheri(E),Mumbai-40072</h1>
+             </div>
+            
           </div>
         </div>
       </div>
