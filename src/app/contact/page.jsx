@@ -46,17 +46,34 @@ const Contact = () => {
             </div>
 
             {/* Google Map */}
-            <div className="w-full h-[250px] sm:h-[350px] relative rounded-2xl overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8225589217414!2d72.97050121490196!3d19.08693748708432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b90f0eeb62eb%3A0xc2d676bcb110db4d!2sThane%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1632846857241!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                className="absolute top-0 left-0 w-full h-full"
-              ></iframe>
-            </div>
+            <div className="w-full space-y-4">
+  {/* <!-- First Location --> */}
+  <div className="w-full h-[250px] sm:h-[350px] relative rounded-2xl overflow-hidden">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8653856063793!2d72.89023277493088!3d19.113560550792815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c92d5e58cdc9%3A0x94c2dec7f68a1d1b!2z4KSs4KWB4KSu4KSw4KSB4KSXIOCkrOCkv-CksuCljeCkoeCkv-CkguCklw!5e0!3m2!1shi!2sin!4v1737356266212!5m2!1shi!2sin"
+      width="100%"
+      height="100%"
+      // style="border: 0"
+      // allowfullscreen=""
+      loading="lazy"
+      className="absolute top-0 left-0 w-full h-full"
+    ></iframe>
+  </div>
+
+  {/* <!-- Second Location --> */}
+  <div className="w-full h-[250px] sm:h-[350px] relative rounded-2xl overflow-hidden">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.1753228734137!2d72.81877477492861!3d19.01199455397927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf3304e7b959%3A0x86db87def27be600!2z4KS14KWA4KS14KSw4KWN4KSVIOCkteCkvuCkuOCkteCkvuCkqOClgCDgpJrgpYjgpILgpKzgpLDgpY3gpLg!5e0!3m2!1shi!2sin!4v1737356362283!5m2!1shi!2sin"
+      width="100%"
+      height="100%"
+      // style="border: 0"
+      // allowfullscreen=""
+      loading="lazy"
+      className="absolute top-0 left-0 w-full h-full"
+    ></iframe>
+  </div>
+</div>
+
           </div>
 
           {/* Google Form Embed Section */}
